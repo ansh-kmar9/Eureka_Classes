@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Search, UserCog } from "lucide-react";
+import { Search, Trash2, UserCog } from "lucide-react";
 import { ActionButton } from "@/components/ui/action-button";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Input, Label } from "@/components/ui/field";
-import { setTeacherRole } from "@/features/admin/actions";
+import { deleteUserPermanently, setTeacherRole } from "@/features/admin/actions";
 import { StudentAvatar } from "@/features/students/components/student-card";
 import { sanitizeSearch } from "@/lib/search";
 import { createClient } from "@/lib/supabase/server";
@@ -106,6 +106,21 @@ export default async function AdminTeachersPage({
             {teachers.map((person) => (
               <li key={person.id}>
                 <PersonRow person={person}>
+                  <ActionButton
+                    size="icon"
+                    variant="ghost"
+                    aria-label={t("deleteTeacher")}
+                    action={deleteUserPermanently.bind(null, person.id)}
+                    successMessage={toasts("userDeleted")}
+                    confirm={{
+                      title: t("deleteTeacherTitle"),
+                      description: t("deleteTeacherBody"),
+                      confirmLabel: t("deleteTeacher"),
+                      cancelLabel: t("cancel"),
+                    }}
+                  >
+                    <Trash2 className="size-4 text-danger" aria-hidden />
+                  </ActionButton>
                   <ActionButton
                     size="sm"
                     variant="outline"

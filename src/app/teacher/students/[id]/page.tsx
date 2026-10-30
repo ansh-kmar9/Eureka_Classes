@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getFormatter, getTranslations } from "next-intl/server";
+import { Trash2 } from "lucide-react";
+import { ActionButton } from "@/components/ui/action-button";
 import { Card } from "@/components/ui/card";
 import { BackLink } from "@/components/ui/back-link";
 import { StatusBadge } from "@/features/students/components/status-badge";
 import { StudentAvatar } from "@/features/students/components/student-card";
 import { StudentActions } from "@/features/students/components/student-actions";
+import { requireStaff } from "@/features/auth/guards";
+import { deleteUserPermanently } from "@/features/admin/actions";
 import { getStudent } from "@/features/students/queries";
 
 export const metadata: Metadata = { title: "Student" };
@@ -16,6 +20,7 @@ export default async function StudentDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const viewer = await requireStaff();
   const student = await getStudent(id);
   if (!student) notFound();
 
@@ -24,6 +29,17 @@ export default async function StudentDetailPage({
   const streams = await getTranslations("streams");
   const boards = await getTranslations("boards");
   const format = await getFormatter();
+  const isAdmin = viewer.role === "admin";
+  const name = student.full_name ?? student.email;
+
+  // After a successful delete this student no longer exists, so go back to the list.
+  async function removeStudent() {
+    "use server";
+    const result = await deleteUserPermanently(id);
+    if (result.ok) redirect("/teacher");
+    return result;
+  }
+
   const date = (value: string | null) =>
     value ? format.dateTime(new Date(value), { dateStyle: "medium" }) : null;
 
@@ -65,6 +81,26 @@ export default async function StudentDetailPage({
           ))}
         </dl>
       </Card>
+
+      {isAdmin && (
+        <Card className="space-y-3 border-danger">
+          <h2 className="font-semibold text-danger">{t("dangerTitle")}</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">{t("deleteHint")}</p>
+          <ActionButton
+            variant="danger"
+            action={removeStudent}
+            confirm={{
+              title: t("deleteConfirmTitle", { name }),
+              description: t("deleteConfirmBody"),
+              confirmLabel: t("deletePermanent"),
+              cancelLabel: t("cancel"),
+            }}
+          >
+            <Trash2 className="size-4" aria-hidden />
+            {t("deletePermanent")}
+          </ActionButton>
+        </Card>
+      )}
     </div>
   );
 }

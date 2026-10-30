@@ -312,7 +312,8 @@ export type Database = {
       >;
       announcements: Table<
         Announcement,
-        Pick<Announcement, "title" | "body">
+        Pick<Announcement, "title" | "body">,
+        Partial<Pick<Announcement, "title" | "body" | "created_by">>
       >;
       contact_messages: Table<
         ContactMessage,
@@ -324,7 +325,8 @@ export type Database = {
       courses: Table<
         Course,
         Pick<Course, "class" | "subject_id" | "title"> &
-          Partial<Pick<Course, "stream" | "description">>
+          Partial<Pick<Course, "stream" | "description">>,
+        Partial<Pick<Course, "class" | "subject_id" | "title" | "stream" | "description" | "created_by">>
       >;
       lessons: Table<
         Lesson,
@@ -338,7 +340,8 @@ export type Database = {
       study_materials: Table<
         StudyMaterial,
         Pick<StudyMaterial, "class" | "subject_id" | "title" | "url"> &
-          Partial<Pick<StudyMaterial, "stream">>
+          Partial<Pick<StudyMaterial, "stream">>,
+        Partial<Pick<StudyMaterial, "class" | "subject_id" | "title" | "url" | "stream" | "created_by">>
       >;
       catalog_subjects: Table<
         CatalogSubject,
@@ -353,7 +356,8 @@ export type Database = {
       practice_tests: Table<
         PracticeTest,
         Pick<PracticeTest, "topic_id"> &
-          Partial<Pick<PracticeTest, "duration_minutes" | "is_published">>
+          Partial<Pick<PracticeTest, "duration_minutes" | "is_published">>,
+        Partial<Pick<PracticeTest, "topic_id" | "duration_minutes" | "is_published" | "created_by">>
       >;
       questions: Table<
         Question,
@@ -373,7 +377,12 @@ export type Database = {
         ScheduledTest,
         Pick<ScheduledTest, "title" | "class" | "starts_at" | "duration_minutes"> &
           Partial<Pick<ScheduledTest, "stream" | "status">>,
-        Partial<Pick<ScheduledTest, "title" | "class" | "stream" | "starts_at" | "duration_minutes" | "status">>
+        Partial<
+          Pick<
+            ScheduledTest,
+            "title" | "class" | "stream" | "starts_at" | "duration_minutes" | "status" | "created_by"
+          >
+        >
       >;
       scheduled_questions: Table<
         ScheduledQuestion,

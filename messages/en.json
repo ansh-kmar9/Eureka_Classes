@@ -366,7 +366,12 @@
     "age": "Age",
     "joined": "Joined",
     "approvedOn": "Approved on",
-    "board": "Board"
+    "board": "Board",
+    "dangerTitle": "Danger zone",
+    "deleteHint": "Permanently removes this student and everything linked to them: profile, test results, progress, badges and community messages. They could sign up again later as a brand-new student. This cannot be undone.",
+    "deletePermanent": "Delete permanently",
+    "deleteConfirmTitle": "Delete {name} permanently?",
+    "deleteConfirmBody": "This removes the student and everything they have done, for good. It cannot be undone."
   },
   "requests": {
     "title": "Class change requests",
@@ -414,7 +419,10 @@
     "deleteTitle": "Delete this message?",
     "deleteBody": "This cannot be undone.",
     "markRead": "Mark as read",
-    "markUnread": "Mark as unread"
+    "markUnread": "Mark as unread",
+    "deleteTeacher": "Delete permanently",
+    "deleteTeacherTitle": "Delete this teacher permanently?",
+    "deleteTeacherBody": "Their account and community messages are removed for good. Courses, tests, material and announcements they created are kept and moved to you. This cannot be undone."
   },
   "account": {
     "title": "Account",
@@ -1163,6 +1171,7 @@
     "notificationsOn": "Notifications are on.",
     "downloaded": "Test saved on this phone. You can take it offline.",
     "synced": "{count, plural, one {# offline result was} other {# offline results were}} saved to your account.",
-    "messageDeleted": "Message deleted."
+    "messageDeleted": "Message deleted.",
+    "userDeleted": "Account deleted permanently."
   }
 }
