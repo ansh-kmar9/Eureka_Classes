@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens. Every colour in the app comes from here. */
+:root {
+  --background: #f6f7fb;
+  --surface: #ffffff;
+  --surface-muted: #eef0f7;
+  --border: #e1e4ee;
+  --foreground: #0f172a;
+  --muted-foreground: #556077;
+
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eceeff;
+
+  --accent: #f59e0b;
+  --accent-soft: #fff4d6;
+  --accent-foreground: #422006;
+
+  --success: #15803d;
+  --success-soft: #dcfce7;
+  --danger: #b91c1c;
+  --danger-soft: #fee2e2;
+
+  --ring: #4f46e5;
+  --radius: 0.875rem;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0b1020;
+  --surface: #131a2e;
+  --surface-muted: #1a2340;
+  --border: #27314f;
+  --foreground: #e8ecf8;
+  --muted-foreground: #9aa5c0;
+
+  --primary: #818cf8;
+  --primary-foreground: #0b1020;
+  --primary-soft: #1e2650;
+
+  --accent: #fbbf24;
+  --accent-soft: #3a2c0c;
+  --accent-foreground: #fef3c7;
+
+  --success: #4ade80;
+  --success-soft: #11321f;
+  --danger: #f87171;
+  --danger-soft: #3b1618;
+
+  --ring: #818cf8;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-ring: var(--ring);
+
+  --radius-card: var(--radius);
+  --radius-control: 0.75rem;
+
+  --font-sans: var(--font-inter), var(--font-devanagari), ui-sans-serif,
+    system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--primary-soft);
+  }
+}
+
+@layer utilities {
+  /* Keeps fixed bars clear of the iOS home indicator / Android gesture bar. */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

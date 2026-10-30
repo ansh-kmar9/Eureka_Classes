@@ -1,0 +1,159 @@
+Q1. Which of the following is an irrational number?
+A) 4/9
+B) 0.75
+C) √2
+D) √49
+Answer: C
+Explanation: √2 cannot be written as p/q, so it is irrational. √49 = 7, which is rational.
+
+Q2. The number 0.333... (3 repeating forever) can be written as:
+A) 1/3
+B) 3/10
+C) 33/100
+D) 1/30
+Answer: A
+Explanation: Let x = 0.333...; then 10x = 3.333..., so 9x = 3 and x = 1/3.
+
+Q3. Which of these is a rational number between 1 and 2?
+A) √3
+B) π
+C) √2
+D) 3/2
+Answer: D
+Explanation: 3/2 = 1.5 lies between 1 and 2 and is a fraction of two integers. √3, π and √2 are irrational.
+
+Q4. The decimal expansion of a rational number is either terminating or:
+A) non-terminating and non-repeating
+B) non-terminating and repeating
+C) always zero
+D) always irrational
+Answer: B
+Explanation: A rational number's decimal either ends or repeats a block of digits forever.
+
+Q5. What is the value of √144?
+A) 12
+B) 11
+C) 14
+D) 16
+Answer: A
+Explanation: 12 × 12 = 144.
+
+Q6. Every irrational number is a:
+A) rational number
+B) real number
+C) integer
+D) natural number
+Answer: B
+Explanation: Real numbers are made up of all rational and all irrational numbers.
+
+Q7. The value of √3 × √12 is:
+A) 3
+B) 4
+C) 6
+D) 36
+Answer: C
+Explanation: √3 × √12 = √36 = 6.
+
+Q8. After rationalising the denominator, 1/√2 becomes:
+A) √2
+B) 2/√2
+C) 1/2
+D) √2/2
+Answer: D
+Explanation: Multiply the top and bottom by √2: (1 × √2)/(√2 × √2) = √2/2.
+
+Q9. Which is the smallest natural number?
+A) 0
+B) 1
+C) -1
+D) 2
+Answer: B
+Explanation: Natural numbers start from 1. Zero is a whole number but not a natural number.
+
+Q10. Whole numbers are:
+A) 0 and all natural numbers
+B) only positive numbers
+C) negative numbers
+D) fractions
+Answer: A
+Explanation: Whole numbers are 0, 1, 2, 3, ... which is zero together with the natural numbers.
+
+Q11. The sum of a rational number and an irrational number is always:
+A) rational
+B) an integer
+C) zero
+D) irrational
+Answer: D
+Explanation: If the sum were rational, the irrational number would have to be rational too, which is a contradiction.
+
+Q12. Which of the following is irrational?
+A) 22/7
+B) 3.14
+C) π
+D) 3.14159
+Answer: C
+Explanation: π has a non-terminating, non-repeating decimal expansion. 22/7, 3.14 and 3.14159 are all rational.
+
+Q13. The value of (√5 + √2)(√5 - √2) is:
+A) 3
+B) 7
+C) 5
+D) √3
+Answer: A
+Explanation: Using (a + b)(a - b) = a² - b²: (√5)² - (√2)² = 5 - 2 = 3.
+
+Q14. The decimal expansion of 1/7 is:
+A) terminating
+B) non-terminating and repeating
+C) non-terminating and non-repeating
+D) 0.17
+Answer: B
+Explanation: 1/7 = 0.142857142857..., where the block 142857 repeats forever.
+
+Q15. How many rational numbers lie between 2 and 3?
+A) none
+B) one
+C) ten
+D) infinitely many
+Answer: D
+Explanation: Between any two distinct numbers there are infinitely many rational numbers.
+
+Q16. The value of 2³ × 2² is:
+A) 2⁶
+B) 2⁵
+C) 4⁵
+D) 2¹
+Answer: B
+Explanation: When bases are the same, add the powers: aᵐ × aⁿ = aᵐ⁺ⁿ, so 2³ × 2² = 2⁵ = 32.
+
+Q17. The value of 16^(1/2) is:
+A) 2
+B) 8
+C) 4
+D) 256
+Answer: C
+Explanation: A power of 1/2 means the square root, and √16 = 4.
+
+Q18. The value of 27^(1/3) is:
+A) 3
+B) 9
+C) 81
+D) 1/3
+Answer: A
+Explanation: A power of 1/3 means the cube root, and 3 × 3 × 3 = 27.
+
+Q19. Which of the following is a rational number?
+A) √7
+B) π
+C) 0.25
+D) 0.1010010001...
+Answer: C
+Explanation: 0.25 = 1/4, so it is rational. The decimal 0.1010010001... never repeats a block, so it is irrational.
+
+Q20. The number 0 is:
+A) a natural number
+B) an irrational number
+C) a negative number
+D) a whole number but not a natural number
+Answer: D
+Explanation: Whole numbers include 0, but natural numbers start from 1.

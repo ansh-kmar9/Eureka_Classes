@@ -1,0 +1,1168 @@
+{
+  "common": {
+    "toggleTheme": "Toggle light or dark theme",
+    "switchLanguage": "Switch language",
+    "close": "Close",
+    "classLabel": "Class {n}",
+    "profile": "Profile",
+    "loading": "Loading...",
+    "notifications": "Notifications",
+    "dismiss": "Dismiss",
+    "backToDashboard": "Back to dashboard",
+    "backToHome": "Back to home",
+    "skipToContent": "Skip to main content"
+  },
+  "nav": {
+    "primary": "Main navigation",
+    "mobile": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "features": "Features",
+    "contact": "Contact",
+    "login": "Login",
+    "app": "Open app"
+  },
+  "studentNav": {
+    "label": "App navigation",
+    "test": "Test",
+    "dashboard": "Dashboard",
+    "community": "Community",
+    "bot": "EurekaBot",
+    "spoken": "Spoken"
+  },
+  "footer": {
+    "tagline": "Smart coaching for classes 6 to 12. Learn, practise and grow with your teachers.",
+    "links": "Quick links",
+    "reach": "Reach us",
+    "rights": "© {year} {name}. All rights reserved."
+  },
+  "meta": {
+    "homeTitle": "Eureka Classes | Coaching for Classes 6 to 12",
+    "homeDescription": "Eureka Classes is a coaching institute for classes 6 to 12 with test series, video courses, study material, spoken English and an AI study helper.",
+    "aboutTitle": "About us",
+    "aboutDescription": "Learn about Eureka Classes, our teaching approach and the classes and streams we cover.",
+    "featuresTitle": "Features",
+    "featuresDescription": "Test series, scheduled tests, video courses, study material, community, spoken English and EurekaBot, all in one app.",
+    "contactTitle": "Contact us",
+    "contactDescription": "Get in touch with Eureka Classes to ask about admissions, batches and fees.",
+    "loginTitle": "Login"
+  },
+  "home": {
+    "badge": "Classes 6 to 12",
+    "title": "Learn smarter with Eureka Classes",
+    "subtitle": "Chapter-wise tests, video courses, study material and an AI helper. Everything for your class in one simple app.",
+    "ctaPrimary": "Get started",
+    "ctaSecondary": "See features",
+    "classesTitle": "A place for every class",
+    "classesSubtitle": "Content is shown for your class only, so you never search through what you do not need.",
+    "highlightsTitle": "Everything you need to study",
+    "highlights": {
+      "tests": {
+        "title": "Test series",
+        "description": "20 MCQs per topic with a 30 minute timer, plus optional AI feedback on your answers."
+      },
+      "offline": {
+        "title": "Works offline",
+        "description": "Download tests and practise without internet. Your score syncs when you are back online."
+      },
+      "courses": {
+        "title": "Video courses",
+        "description": "Subject-wise lessons and PDFs prepared by your teachers for your class."
+      },
+      "community": {
+        "title": "Student community",
+        "description": "Ask doubts, reply to friends and learn together in a safe, moderated space."
+      },
+      "bot": {
+        "title": "EurekaBot",
+        "description": "An AI study helper that explains topics and answers your questions any time."
+      },
+      "spoken": {
+        "title": "Spoken English",
+        "description": "Short lessons to build your confidence and speak English fluently."
+      }
+    },
+    "stepsTitle": "How to join",
+    "steps": {
+      "one": {
+        "title": "Sign in with Google",
+        "description": "Use your Google account. No new password to remember."
+      },
+      "two": {
+        "title": "Complete your profile",
+        "description": "Add your name, class, age and mobile number."
+      },
+      "three": {
+        "title": "Get approved",
+        "description": "Your teacher approves your enrolment and every feature unlocks."
+      }
+    },
+    "finalTitle": "Ready to start learning?",
+    "finalSubtitle": "Log in with Google and complete your profile in under a minute."
+  },
+  "about": {
+    "title": "About Eureka Classes",
+    "intro": "Eureka Classes is a coaching institute for students of classes 6 to 12. We combine caring teachers with simple technology so every student can learn at their own pace.",
+    "missionTitle": "Our mission",
+    "mission": "To make quality coaching clear, affordable and easy to access for every student, on any phone.",
+    "valuesTitle": "What we believe in",
+    "values": {
+      "clarity": {
+        "title": "Clear concepts",
+        "description": "We focus on understanding, not rote learning."
+      },
+      "practice": {
+        "title": "Regular practice",
+        "description": "Frequent tests and feedback help you improve step by step."
+      },
+      "care": {
+        "title": "Personal attention",
+        "description": "Teachers know each student and guide them individually."
+      }
+    },
+    "coverTitle": "What we cover",
+    "coverClasses": "Classes 6 to 10: all main subjects.",
+    "coverStreams": "Classes 11 and 12: Science, Commerce and Arts.",
+    "cta": "Join Eureka Classes"
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Built mobile-first so you can study from anywhere.",
+    "studentsTitle": "For students",
+    "students": {
+      "tests": {
+        "title": "Test series",
+        "description": "Topic-wise MCQ tests for your class with instant results and optional AI analysis."
+      },
+      "scheduled": {
+        "title": "Scheduled tests",
+        "description": "Timed tests set by your teacher, with a notification when one is scheduled."
+      },
+      "courses": {
+        "title": "Courses and study material",
+        "description": "Video lessons and PDFs organised by subject, with progress tracking."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Track your scores, badges, leaderboard rank and course progress."
+      },
+      "community": {
+        "title": "Community",
+        "description": "Chat with classmates, like helpful messages and reply to doubts."
+      },
+      "bot": {
+        "title": "EurekaBot",
+        "description": "Ask the AI helper to explain any topic in simple words."
+      },
+      "spoken": {
+        "title": "Spoken English",
+        "description": "Practise pronunciation and everyday conversation."
+      },
+      "offline": {
+        "title": "Offline and installable",
+        "description": "Install the app on your phone and practise downloaded tests without internet."
+      }
+    },
+    "teachersTitle": "For teachers",
+    "teachers": {
+      "approve": {
+        "title": "Approve students",
+        "description": "Review new students and unlock their access in one tap."
+      },
+      "manage": {
+        "title": "Manage students",
+        "description": "Search and filter students, or block access when needed."
+      },
+      "announce": {
+        "title": "Announcements",
+        "description": "Share important updates with every approved student."
+      },
+      "create": {
+        "title": "Courses and tests",
+        "description": "Create courses and schedule one-attempt tests for a class."
+      },
+      "moderate": {
+        "title": "Community moderation",
+        "description": "Join the conversation and remove inappropriate messages."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Questions about admissions, batches or fees? We would love to help.",
+    "call": "Call us",
+    "whatsapp": "WhatsApp",
+    "email": "Email"
+  },
+  "login": {
+    "title": "Welcome to Eureka Classes",
+    "subtitle": "Sign in with Google to continue. You will complete your profile next.",
+    "google": "Continue with Google"
+  },
+  "validation": {
+    "name": "Enter your full name (at least 2 letters)",
+    "class": "Select your class",
+    "stream": "Select your stream",
+    "age": "Enter an age between 8 and 30",
+    "mobile": "Enter a valid 10-digit mobile number",
+    "email": "Enter a valid email address",
+    "message": "Write a message (up to 2000 characters)",
+    "title": "Enter a title (up to 120 characters)",
+    "description": "Enter a description (up to 2000 characters)",
+    "url": "Enter a valid link that starts with https://",
+    "youtube": "Enter a valid YouTube link",
+    "subject": "Enter a subject name (letters and numbers, up to 60 characters)",
+    "topic": "Enter a topic (up to 120 characters)",
+    "question": "Enter the question (up to 1000 characters)",
+    "option": "Enter this option (up to 300 characters)",
+    "answer": "Choose the correct answer",
+    "board": "Select your board (CBSE or BSEB)",
+    "duration": "Enter a duration between 5 and 300 minutes",
+    "startTime": "Choose a valid date and time"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "unauthorized": "Please sign in again.",
+    "oauth": "Sign-in failed. Please try again.",
+    "tooMany": "You have sent several messages recently. Please wait a few minutes and try again."
+  },
+  "contactForm": {
+    "title": "Send us a message",
+    "name": "Your name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Thanks! We have received your message and will reply soon."
+  },
+  "onboarding": {
+    "title": "Complete your profile",
+    "subtitle": "We need a few details before you can start. This step is required.",
+    "fullName": "Full name",
+    "class": "Class",
+    "classPlaceholder": "Select your class",
+    "stream": "Stream",
+    "streamPlaceholder": "Select your stream",
+    "age": "Age",
+    "mobile": "Mobile number",
+    "mobileHint": "10-digit number",
+    "submit": "Save and continue",
+    "saving": "Saving...",
+    "board": "Board",
+    "boardPlaceholder": "Select your board"
+  },
+  "enrolment": {
+    "pendingTitle": "Waiting for teacher approval",
+    "pendingBody": "Your profile is complete. A teacher will approve your enrolment soon. Once approved, every feature unlocks and you will get a notification.",
+    "blockedTitle": "Access paused",
+    "blockedBody": "A teacher has paused your access. Please contact Eureka Classes for help.",
+    "lockedTitle": "This section is locked",
+    "lockedBody": "It unlocks as soon as a teacher approves your enrolment.",
+    "detailsTitle": "Your details",
+    "name": "Name",
+    "class": "Class",
+    "mobile": "Mobile",
+    "signOut": "Sign out"
+  },
+  "dashboard": {
+    "greeting": "Hello, {name}",
+    "tiles": {
+      "courses": "Courses",
+      "materials": "Study material"
+    },
+    "myCourses": "My courses",
+    "viewAll": "View all",
+    "stats": {
+      "tests": "Tests taken",
+      "average": "Average score",
+      "rank": "Class rank",
+      "badges": "Badges"
+    },
+    "recent": {
+      "title": "Recent results",
+      "takeTest": "Take a test",
+      "empty": "You have not taken a practice test yet. Your results will show up here."
+    },
+    "spoken": {
+      "title": "Spoken English",
+      "continue": "Next lesson: {lesson}",
+      "startFirst": "Start your first lesson and earn XP",
+      "allDone": "You finished the whole course. Keep practising every day!",
+      "open": "Open course"
+    }
+  },
+  "comingSoon": {
+    "title": "Coming soon",
+    "body": "This section is being built."
+  },
+  "staff": {
+    "teacherTitle": "Teacher panel",
+    "adminTitle": "Admin panel",
+    "soon": "This panel is being built next."
+  },
+  "teacherNav": {
+    "label": "Teacher navigation",
+    "students": "Students",
+    "announcements": "Announce",
+    "content": "Content",
+    "tests": "Tests",
+    "community": "Community"
+  },
+  "adminNav": {
+    "label": "Admin navigation",
+    "teachers": "Teachers",
+    "messages": "Messages",
+    "panel": "Teacher panel"
+  },
+  "streams": {
+    "science": "Science",
+    "commerce": "Commerce",
+    "arts": "Arts"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "status": "Page {page} of {pages}"
+  },
+  "students": {
+    "title": "Students",
+    "statusTabs": "Filter by status",
+    "tabs": {
+      "all": "All",
+      "pending": "Pending",
+      "approved": "Approved",
+      "blocked": "Blocked",
+      "incomplete": "Incomplete"
+    },
+    "status": {
+      "incomplete": "Profile incomplete",
+      "pending": "Pending",
+      "approved": "Approved",
+      "blocked": "Blocked"
+    },
+    "filters": "Search and filter",
+    "search": "Name, email or mobile",
+    "class": "Class",
+    "allClasses": "All classes",
+    "stream": "Stream",
+    "allStreams": "All streams",
+    "apply": "Apply",
+    "clear": "Clear",
+    "count": "{count, plural, one {# student} other {# students}}",
+    "emptyTitle": "No students found",
+    "empty": "Try a different filter, or wait for new students to sign up.",
+    "requestsAlert": "{count, plural, one {# class change request is waiting} other {# class change requests are waiting}}",
+    "approve": "Approve",
+    "block": "Block",
+    "unblock": "Unblock",
+    "blockTitle": "Block this student?",
+    "blockBody": "They will lose access to every feature until you unblock them.",
+    "cancel": "Cancel",
+    "back": "Back to students",
+    "email": "Email",
+    "mobile": "Mobile",
+    "age": "Age",
+    "joined": "Joined",
+    "approvedOn": "Approved on",
+    "board": "Board"
+  },
+  "requests": {
+    "title": "Class change requests",
+    "empty": "No pending requests.",
+    "approve": "Approve",
+    "reject": "Reject",
+    "requested": "Requested on {date}"
+  },
+  "announcements": {
+    "title": "Announcements",
+    "newTitle": "New announcement",
+    "titleLabel": "Title",
+    "bodyLabel": "Description",
+    "publish": "Publish",
+    "publishing": "Publishing...",
+    "empty": "No announcements yet.",
+    "delete": "Delete",
+    "deleteTitle": "Delete this announcement?",
+    "deleteBody": "Students will no longer see it.",
+    "posted": "Posted {date}",
+    "open": "Open announcements",
+    "openUnread": "Open announcements, {count} unread",
+    "close": "Close",
+    "new": "New"
+  },
+  "admin": {
+    "teachersTitle": "Teachers",
+    "teachersSubtitle": "Choose who can approve students and manage content.",
+    "addTitle": "Add a teacher",
+    "searchLabel": "Search by name or email",
+    "search": "Search",
+    "searchHint": "The person must have signed in once with Google.",
+    "noResults": "No matching users found.",
+    "makeTeacher": "Make teacher",
+    "currentTitle": "Current teachers",
+    "noTeachers": "No teachers yet.",
+    "removeTitle": "Remove teacher access?",
+    "removeBody": "They become a student account and will need to complete a profile again.",
+    "removeTeacher": "Remove",
+    "cancel": "Cancel",
+    "messagesTitle": "Contact messages",
+    "noMessages": "No messages yet.",
+    "new": "New",
+    "delete": "Delete",
+    "deleteTitle": "Delete this message?",
+    "deleteBody": "This cannot be undone.",
+    "markRead": "Mark as read",
+    "markUnread": "Mark as unread"
+  },
+  "account": {
+    "title": "Account",
+    "role": {
+      "teacher": "Teacher",
+      "admin": "Admin"
+    }
+  },
+  "notifications": {
+    "title": "Stay updated",
+    "body": "Get a notification when a teacher approves you, and when a test is scheduled.",
+    "enable": "Turn on notifications",
+    "enabling": "Turning on...",
+    "denied": "Notifications are blocked. Turn them on in your browser settings to get updates.",
+    "iosInstall": "On iPhone, first add this app to your Home Screen (tap Share, then Add to Home Screen) and open it from there.",
+    "failed": "Could not turn on notifications on this browser. If you use Brave, enable Settings, Privacy and security, Use Google services for push messaging. Also check that a VPN or ad blocker is not blocking it, then try again.",
+    "dismissed": "The permission prompt was closed. Click the button again and choose Allow."
+  },
+  "offline": {
+    "title": "You are offline",
+    "body": "Check your internet connection and try again. Tests you downloaded still work.",
+    "retry": "Try again",
+    "downloaded": "Downloaded tests"
+  },
+  "content": {
+    "tabs": {
+      "label": "Content sections",
+      "courses": "Courses",
+      "materials": "Study material"
+    },
+    "class": "Class",
+    "stream": "Stream",
+    "allStreams": "All streams",
+    "classPlaceholder": "Select class",
+    "subject": "Subject",
+    "subjectHint": "Pick an existing subject or type a new one.",
+    "title": "Title",
+    "description": "Description (optional)",
+    "url": "Link (https)",
+    "filterAll": "All",
+    "cancel": "Cancel",
+    "courses": {
+      "title": "Courses",
+      "new": "New course",
+      "create": "Create course",
+      "creating": "Creating...",
+      "empty": "No courses yet",
+      "emptyBody": "Create a course above, then add its lessons.",
+      "back": "Back to courses",
+      "delete": "Delete course",
+      "deleteTitle": "Delete this course?",
+      "deleteBody": "All its lessons and every student's progress will be removed. This cannot be undone."
+    },
+    "lessons": {
+      "title": "Lessons",
+      "titleLabel": "Lesson title",
+      "type": "Type",
+      "video": "YouTube video",
+      "pdf": "PDF",
+      "videoUrl": "YouTube link",
+      "pdfUrl": "PDF link (Cloudinary or any https link)",
+      "add": "Add lesson",
+      "adding": "Adding...",
+      "empty": "No lessons yet. Add the first one below.",
+      "delete": "Delete lesson",
+      "deleteTitle": "Delete this lesson?",
+      "deleteBody": "It will disappear for students too.",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "open": "Open link"
+    },
+    "materials": {
+      "title": "Study material",
+      "new": "Add study material",
+      "add": "Add material",
+      "adding": "Adding...",
+      "empty": "No study material yet",
+      "delete": "Delete",
+      "deleteTitle": "Delete this material?",
+      "deleteBody": "Students will no longer see it.",
+      "open": "Open link"
+    }
+  },
+  "courses": {
+    "title": "Courses",
+    "subtitle": "Courses prepared by your teachers for your class.",
+    "emptyTitle": "No courses yet",
+    "emptyBody": "Your teachers have not added a course for your class yet. Check back soon.",
+    "noLessons": "Lessons coming soon",
+    "progress": "{done} of {total} lessons done",
+    "lessons": "{count, plural, one {# lesson} other {# lessons}}",
+    "back": "Back to courses",
+    "lessonsTitle": "Lessons",
+    "video": "Video",
+    "pdf": "PDF",
+    "completed": "Completed",
+    "playVideo": "Play video: {title}",
+    "openPdf": "Open PDF",
+    "markDone": "Mark as complete",
+    "markUndone": "Completed. Tap to undo",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "materials": {
+    "title": "Study material",
+    "subtitle": "Notes, PDFs and links shared by your teachers for your class.",
+    "emptyTitle": "No study material yet",
+    "emptyBody": "Your teachers have not added material for your class yet. Check back soon.",
+    "back": "Back to study material",
+    "openExternal": "Opens in a new tab"
+  },
+  "profile": {
+    "title": "Profile",
+    "detailsTitle": "Your details",
+    "fullName": "Full name",
+    "age": "Age",
+    "mobile": "Mobile number",
+    "save": "Save changes",
+    "saving": "Saving...",
+    "saved": "Saved",
+    "classTitle": "Class",
+    "currentClass": "Current class",
+    "newClass": "New class",
+    "stream": "Stream",
+    "streamPlaceholder": "Select your stream",
+    "helpRequest": "Class changes need a teacher's approval. Send a request and a teacher will review it.",
+    "helpDirect": "Your enrolment is not approved yet, so you can change your class right now.",
+    "requestPending": "Request pending: {value}",
+    "withdraw": "Withdraw request",
+    "sendRequest": "Send request",
+    "updateClass": "Update class",
+    "sending": "Please wait...",
+    "notice": {
+      "updated": "Class updated.",
+      "requested": "Request sent. A teacher will review it.",
+      "same": "That is already your class.",
+      "duplicate": "You already have a request waiting.",
+      "failed": "Something went wrong. Please try again."
+    },
+    "board": "Board",
+    "boardPlaceholder": "Select your board"
+  },
+  "pdf": {
+    "loading": "Loading PDF...",
+    "error": "Could not open this PDF",
+    "errorHint": "Check your internet connection and try again. If it keeps failing, ask your teacher to check the link.",
+    "retry": "Try again",
+    "openExternal": "Open in a new tab",
+    "page": "Page {page} of {total}",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "pageLabel": "Page {n}"
+  },
+  "tests": {
+    "title": "Test series",
+    "subtitle": "Topic-wise tests for your class. Take them as many times as you like.",
+    "leaderboard": "Leaderboard",
+    "leaderboardHint": "Top students in {class}. Points are your best score on each test, added up.",
+    "leaderboardEmpty": "No one is on the board yet. Take a test to be the first!",
+    "emptyTitle": "No tests yet",
+    "emptyBody": "Your teachers have not published a test for your class yet. Check back soon.",
+    "meta": "{count} questions · {minutes} min",
+    "best": "Best {score}/{total}",
+    "attempts": "{count, plural, one {# attempt} other {# attempts}}",
+    "notAttempted": "Not attempted",
+    "back": "Back to tests",
+    "start": "Start test",
+    "startAgain": "Take it again",
+    "history": "Your attempts",
+    "you": "You",
+    "testsTaken": "{count, plural, one {# test} other {# tests}} taken",
+    "points": "pts",
+    "rules": {
+      "timer": "You have {minutes} minutes. The timer starts as soon as you begin.",
+      "autoSubmit": "When the time is up, your answers are submitted automatically.",
+      "retake": "You can take this test as many times as you want.",
+      "best": "Your best score on each test counts towards the leaderboard."
+    },
+    "runner": {
+      "progress": "Questions answered",
+      "position": "Question {current} of {total}",
+      "answered": "{count} answered",
+      "clear": "Clear my answer",
+      "previous": "Previous",
+      "next": "Next",
+      "questionList": "All questions",
+      "close": "Close",
+      "goToQuestion": "Go to question {n}",
+      "submit": "Submit test",
+      "submitTitle": "Submit your test?",
+      "submitUnanswered": "{count, plural, one {# question is} other {# questions are}} still unanswered. You cannot change your answers after submitting.",
+      "submitReady": "You have answered every question. You cannot change your answers after submitting.",
+      "keepGoing": "Keep going",
+      "submitFailed": "We could not submit your test. Check your internet connection and try again. Your answers are saved on this device.",
+      "retry": "Try again",
+      "remainingQuestions": "{count} left"
+    },
+    "result": {
+      "took": "Took {minutes}m {seconds}s",
+      "tryAgain": "Take it again",
+      "backToTests": "Back to tests",
+      "review": "Review your answers",
+      "skipped": "Skipped",
+      "correct": "Correct",
+      "wrong": "Wrong",
+      "yourAnswer": "Your answer",
+      "explanation": "Explanation"
+    },
+    "comingSoon": "Coming soon",
+    "subjectProgress": "{done} of {total} tests attempted",
+    "noTopicsTitle": "No topics yet",
+    "noTopicsBody": "Your teachers are still adding topics for this subject.",
+    "downloaded": "Downloaded"
+  },
+  "testsAdmin": {
+    "title": "Practice tests",
+    "new": "New practice test",
+    "newHint": "One test per topic, with {count} multiple-choice questions.",
+    "topic": "Topic",
+    "duration": "Time limit",
+    "minutes": "{count} min",
+    "create": "Create test",
+    "creating": "Creating...",
+    "empty": "No practice tests yet",
+    "emptyBody": "Create a test above, then add its questions.",
+    "published": "Published",
+    "draft": "Draft",
+    "questionsCount": "{count}/{total} questions",
+    "back": "Back to tests",
+    "publish": "Publish",
+    "unpublish": "Unpublish",
+    "publishHint": "Add all {total} questions to publish this test. Students cannot see it until then.",
+    "delete": "Delete test",
+    "deleteTitle": "Delete this test?",
+    "deleteBody": "Its questions and every student's attempts will be removed. This cannot be undone.",
+    "cancel": "Cancel",
+    "questionsTitle": "Questions",
+    "noQuestions": "No questions yet. Add them one by one below, or import many at once.",
+    "question": {
+      "title": "Add a question",
+      "text": "Question",
+      "optionsHint": "Type the four options and select the correct one.",
+      "markCorrect": "Mark option {letter} as correct",
+      "option": "Option {letter}",
+      "explanation": "Explanation (optional)",
+      "add": "Add question",
+      "adding": "Adding...",
+      "disabledHint": "This test already has all its questions.",
+      "delete": "Delete question",
+      "correct": "Correct answer"
+    },
+    "import": {
+      "title": "Import many questions",
+      "hint": "Paste questions as plain text or JSON. They are added only if every question is valid.",
+      "exampleTitle": "Show the format",
+      "example": "Q1. What is 2 + 2?\nA) 3\nB) 4\nC) 5\nD) 6\nAnswer: B\nExplanation: Adding two and two gives four.\n\nQ2. Which planet is known as the Red Planet?\nA) Venus\nB) Jupiter\nC) Mars\nD) Saturn\nAnswer: C",
+      "label": "Questions",
+      "success": "{count, plural, one {# question} other {# questions}} added.",
+      "importing": "Importing...",
+      "import": "Import questions",
+      "errors": {
+        "empty": "Paste at least one question.",
+        "json": "That is not valid JSON. Use an array of questions, or switch to the plain text format.",
+        "format": "Question {position} is not valid. Check it has four options and an answer (A to D).",
+        "tooMany": "That would give this test more than {max} questions.",
+        "generic": "Something went wrong. Please try again."
+      }
+    },
+    "intro": "Pick a board and class, then open a topic to create its practice test of 20 questions.",
+    "noTest": "No test yet"
+  },
+  "boards": {
+    "cbse": "CBSE",
+    "bseb": "BSEB",
+    "promptTitle": "Choose your board",
+    "promptBody": "Tell us whether you study under CBSE or BSEB so we can show the right subjects and tests.",
+    "promptAction": "Choose my board"
+  },
+  "catalog": {
+    "board": "Board",
+    "class": "Class",
+    "stream": "Stream",
+    "allStreams": "All streams",
+    "add": "Add",
+    "duplicate": "That name already exists here.",
+    "failed": "Something went wrong. Please try again.",
+    "creating": "Creating...",
+    "createTest": "Create test",
+    "openTest": "Open test",
+    "hide": "Hide from students",
+    "show": "Show to students",
+    "hideSubject": "Hide this subject",
+    "showSubject": "Show this subject",
+    "hidden": "Hidden",
+    "noTopics": "No topics yet. Add the first one below.",
+    "noSubjects": "No subjects here",
+    "noSubjectsBody": "Add a subject below, or pick a different board, class or stream.",
+    "publishedOf": "{done} of {total} tests published",
+    "newTopic": "New topic",
+    "newSubject": "New subject",
+    "deleteTopic": "Delete topic",
+    "deleteTopicTitle": "Delete this topic?",
+    "deleteTopicBody": "It has no test yet, so nothing else is lost. This cannot be undone.",
+    "cancel": "Cancel",
+    "addSubjectTitle": "Add a subject",
+    "addSubjectHint": "It is added to the board, class and stream selected above."
+  },
+  "scheduled": {
+    "title": "Scheduled tests",
+    "subtitle": "Scored tests set by your teachers. You get one attempt at each.",
+    "tabs": {
+      "label": "Test type",
+      "practice": "Practice",
+      "scheduled": "Scheduled"
+    },
+    "phase": {
+      "draft": "Draft",
+      "upcoming": "Upcoming",
+      "live": "Live now",
+      "ended": "Ended",
+      "cancelled": "Cancelled"
+    },
+    "minutes": "{count} min",
+    "score": "Score {score}/{total}",
+    "inProgress": "In progress",
+    "missed": "Missed",
+    "liveNow": "Live now",
+    "upcoming": "Upcoming",
+    "past": "Past tests",
+    "emptyTitle": "No scheduled tests",
+    "emptyBody": "When a teacher schedules a test for your class, it will appear here and you will get a notification.",
+    "back": "Back to scheduled tests",
+    "window": "Opens {start} and closes {end}",
+    "cancelledNote": "This test was cancelled by your teacher.",
+    "missedNote": "You did not take this test while it was open.",
+    "yourScore": "Your score",
+    "start": "Start test",
+    "resume": "Resume test",
+    "rules": {
+      "window": "The test is open only between its start and end time. If you start late, you get only the time that is left.",
+      "oneAttempt": "You get one attempt. Once handed in, you cannot take it again.",
+      "fullscreen": "The test runs in fullscreen. Leaving fullscreen, pressing Back or leaving the app each counts as a warning.",
+      "warnings": "After {count} warnings the test is handed in automatically.",
+      "autoSubmit": "When time is up, your answers are handed in automatically."
+    },
+    "reasons": {
+      "manual": "Submitted by you",
+      "time": "Submitted automatically when time ran out",
+      "fullscreen_exit": "Submitted automatically because fullscreen was closed",
+      "navigation": "Submitted automatically because you left the test page",
+      "strikes": "Submitted automatically after 3 warnings",
+      "expired": "Submitted automatically after the time ended"
+    },
+    "countdown": {
+      "startsIn": "Starts in {time}",
+      "days": "{days}d {hours}h",
+      "hours": "{hours}h {minutes}m",
+      "minutes": "{minutes}m {seconds}s"
+    },
+    "runner": {
+      "rules": {
+        "window": "The test closes at its end time for everyone. If you start late, you get only the time that is left.",
+        "oneAttempt": "You get one attempt. You cannot take it again once it is handed in.",
+        "fullscreen": "The test opens in fullscreen. Leaving fullscreen, pressing Back or leaving the app each counts as a warning.",
+        "noFullscreen": "Fullscreen is not available on this device, so leaving the app or pressing Back counts as a warning.",
+        "warnings": "After {count} warnings the test is handed in automatically.",
+        "autoSubmit": "When time is up, your answers are handed in automatically."
+      },
+      "resumeInfo": "You already started this test. About {minutes} minutes are left.",
+      "timeLeft": "About {minutes} minutes are left in the test window.",
+      "begin": "Begin test",
+      "resume": "Resume test",
+      "starting": "Starting...",
+      "errors": {
+        "fullscreen": "Fullscreen is needed to start. Please allow it and try again.",
+        "notLive": "This test is not open right now.",
+        "already": "You have already taken this test.",
+        "unauthorized": "You cannot take this test.",
+        "generic": "Something went wrong. Check your internet connection and try again."
+      },
+      "submitting": "Handing in your test...",
+      "progress": "Questions answered",
+      "position": "Question {current} of {total}",
+      "answered": "{count} answered",
+      "warning": "Warning {current} of {max}. After {max} warnings your test is handed in automatically.",
+      "submitFailed": "We could not hand in your test. Check your internet connection and try again. Your answers are saved.",
+      "retry": "Try again",
+      "clear": "Clear my answer",
+      "previous": "Previous",
+      "next": "Next",
+      "questionList": "All questions",
+      "close": "Close",
+      "goToQuestion": "Go to question {n}",
+      "submit": "Hand in test",
+      "submitTitle": "Hand in your test?",
+      "submitUnanswered": "{count, plural, one {# question is} other {# questions are}} still unanswered. You cannot change your answers after handing in.",
+      "submitReady": "You have answered every question. You cannot change your answers after handing in.",
+      "keepGoing": "Keep going",
+      "fullscreenLost": {
+        "title": "You left fullscreen",
+        "body": "Return to fullscreen to continue. The timer keeps running, and this counted as a warning.",
+        "action": "Return to fullscreen"
+      }
+    }
+  },
+  "scheduledAdmin": {
+    "title": "Scheduled tests",
+    "intro": "Scored tests for one class, with a fixed start time. Students get one attempt.",
+    "new": "New scheduled test",
+    "newHint": "Create it as a draft, add the questions, then schedule it to notify the class.",
+    "titleLabel": "Test title",
+    "startsAt": "Start date and time",
+    "timeHint": "India time. The test closes at start time plus duration.",
+    "duration": "Duration (minutes)",
+    "creating": "Creating...",
+    "create": "Create test",
+    "empty": "No scheduled tests yet",
+    "emptyBody": "Create a test above, add its questions, then schedule it.",
+    "minutes": "{count} min",
+    "back": "Back to scheduled tests",
+    "window": "Opens {start}, closes {end}",
+    "questionsCount": "{count, plural, one {# question} other {# questions}}",
+    "publish": "Schedule and notify class",
+    "publishTitle": "Schedule this test?",
+    "publishBody": "The class is notified and the questions are locked. After this the test can only be cancelled.",
+    "cancel": "Cancel",
+    "cancelTest": "Cancel test",
+    "cancelTitle": "Cancel this test?",
+    "cancelBody": "Students are told it is cancelled and cannot take it. This cannot be undone.",
+    "keep": "Keep test",
+    "delete": "Delete test",
+    "deleteTitle": "Delete this test?",
+    "deleteBody": "Its questions and any results will be removed. This cannot be undone.",
+    "draftHint": "Add at least one question, then schedule the test. Students cannot see a draft.",
+    "questionsTitle": "Questions",
+    "noQuestions": "No questions yet. Add them one by one below, or import many at once.",
+    "deleteQuestion": "Delete question",
+    "reasons": {
+      "manual": "Submitted by you",
+      "time": "Submitted automatically when time ran out",
+      "fullscreen_exit": "Submitted automatically because fullscreen was closed",
+      "navigation": "Submitted automatically because you left the test page",
+      "strikes": "Submitted automatically after 3 warnings",
+      "expired": "Submitted automatically after the time ended"
+    },
+    "results": {
+      "title": "Results",
+      "attended": "Attended",
+      "average": "Average",
+      "highest": "Highest",
+      "none": "Nobody has started this test yet.",
+      "inProgress": "In progress",
+      "warnings": "{count, plural, one {# warning} other {# warnings}}"
+    }
+  },
+  "ai": {
+    "title": "AI analysis",
+    "intro": "Get personalised feedback on this test: what you did well and what to practise next.",
+    "analyse": "Analyse my test",
+    "analysing": "Eureka AI is reading your answers...",
+    "retry": "Try again",
+    "strengths": "What you did well",
+    "improvements": "What to work on",
+    "nextSteps": "What to do next",
+    "disclaimer": "AI can make mistakes. If something looks wrong, check with your teacher.",
+    "errors": {
+      "unauthorized": "Please sign in again and try once more.",
+      "rateLimited": "You have used all your analyses for this hour. Please try again later.",
+      "busy": "The AI helper is busy right now. Please try again in a minute.",
+      "unavailable": "AI analysis is not available right now.",
+      "generic": "We could not analyse this test. Please try again."
+    }
+  },
+  "badges": {
+    "title": "Badges",
+    "earned": "Earned",
+    "locked": "Not earned yet",
+    "items": {
+      "first_test": {
+        "name": "First step",
+        "description": "Finish your first practice test"
+      },
+      "five_tests": {
+        "name": "On a roll",
+        "description": "Finish 5 practice tests"
+      },
+      "ten_tests": {
+        "name": "Test champion",
+        "description": "Finish 10 practice tests"
+      },
+      "high_scorer": {
+        "name": "High scorer",
+        "description": "Score 90% or more on a test"
+      },
+      "perfect_score": {
+        "name": "Perfect score",
+        "description": "Get every question right"
+      },
+      "streak_7": {
+        "name": "7-day streak",
+        "description": "Take a test 7 days in a row"
+      },
+      "course_complete": {
+        "name": "Course complete",
+        "description": "Finish every lesson of a course"
+      },
+      "spoken_first": {
+        "name": "First words",
+        "description": "Finish your first Spoken English lesson"
+      },
+      "spoken_ten": {
+        "name": "Chatterbox",
+        "description": "Finish 10 Spoken English lessons"
+      },
+      "spoken_streak_3": {
+        "name": "Daily speaker",
+        "description": "Practise Spoken English 3 days in a row"
+      }
+    }
+  },
+  "community": {
+    "title": "Community",
+    "subtitle": "Ask doubts, help each other and learn together. Please be kind and respectful.",
+    "moderatorHint": "You can post here and delete any message that does not belong.",
+    "placeholder": "Write something for the community...",
+    "send": "Send",
+    "teacher": "Teacher",
+    "like": "Like",
+    "unlike": "Remove like",
+    "reply": "Reply",
+    "replies": "{count, plural, one {# reply} other {# replies}}",
+    "replyPlaceholder": "Write a reply...",
+    "delete": "Delete",
+    "deleteTitle": "Delete this message?",
+    "deleteBody": "The message and all its replies will be removed for everyone.",
+    "deleteReplyBody": "This reply will be removed for everyone.",
+    "cancel": "Cancel",
+    "emptyTitle": "No messages yet",
+    "emptyBody": "Be the first to start a conversation.",
+    "loadMore": "Load older messages",
+    "loading": "Loading...",
+    "errors": {
+      "invalid": "Write something first (up to 1000 characters).",
+      "tooFast": "You are posting too fast. Please wait a moment.",
+      "generic": "Could not send. Please try again."
+    }
+  },
+  "bot": {
+    "title": "EurekaBot",
+    "subtitle": "Your AI study helper",
+    "welcome": "Hi! I can explain topics, help with doubts, share study tips and practise spoken English with you. What would you like to learn today?",
+    "suggestions": {
+      "one": "Explain a topic in simple words",
+      "two": "Give me tips to prepare for exams",
+      "three": "Help me practise speaking English"
+    },
+    "placeholder": "Ask a question...",
+    "send": "Send",
+    "newChat": "New chat",
+    "thinking": "EurekaBot is thinking...",
+    "retry": "Try again",
+    "disclaimer": "EurekaBot can make mistakes. Check important answers with your teacher. Chats are not saved.",
+    "errors": {
+      "busy": "EurekaBot is busy right now. Please try again in a moment.",
+      "rateLimited": "You have asked a lot of questions this hour. Please take a short break and come back later.",
+      "unavailable": "EurekaBot is not available right now.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "spoken": {
+    "title": "Spoken English",
+    "subtitle": "Learn to speak English step by step. Listen, speak, play and level up.",
+    "levelLabel": "Level {level}",
+    "levelName": "Level {level}",
+    "ranks": {
+      "beginner": "Beginner",
+      "explorer": "Explorer",
+      "speaker": "Speaker",
+      "storyteller": "Storyteller",
+      "orator": "Orator",
+      "champion": "Champion"
+    },
+    "streak": "{count, plural, =0 {No streak yet} one {# day streak} other {# day streak}}",
+    "xpProgress": "Progress to the next level",
+    "xpTotal": "{xp} XP",
+    "xpToNext": "{xp} XP to level {level}",
+    "lessonsDone": "{done} of {total} lessons finished",
+    "startStreak": "Practise today to start a streak",
+    "phraseCount": "{count} phrases",
+    "locked": "Locked",
+    "start": "Start",
+    "starsEarned": "{count} of 3 stars",
+    "backToCourse": "Back to course",
+    "audio": {
+      "listen": "Listen",
+      "slowly": "Slowly"
+    },
+    "practice": {
+      "cardTitle": "Daily practice",
+      "cardBody": "Review what you have learned and earn XP",
+      "cardDone": "Done for today. You can practise again any time",
+      "cardLocked": "Finish your first lesson to unlock",
+      "title": "Daily practice",
+      "intro": "A mixed review of {count} questions from the lessons you have finished. The first round each day earns XP.",
+      "introDone": "You have earned today's practice XP. You can still practise for fun.",
+      "start": "Start practice",
+      "done": "Practice complete",
+      "score": "You got {correct} of {total} right",
+      "xp": "+{xp} XP",
+      "noMoreXp": "You already earned today's practice XP. Come back tomorrow for more.",
+      "again": "Practise again",
+      "back": "Back to course",
+      "error": "We could not save your result."
+    },
+    "player": {
+      "progress": "Lesson progress",
+      "step": "Step {current} of {total}",
+      "steps": {
+        "learn": "Learn",
+        "speak": "Speak",
+        "quiz": "Quiz"
+      },
+      "tipTitle": "Tip",
+      "overview": "You will learn {count} useful phrases, say them aloud, then take a short quiz.",
+      "start": "Start lesson",
+      "phrase": "Phrase {current} of {total}",
+      "previous": "Previous",
+      "next": "Next",
+      "startSpeaking": "Now say them aloud"
+    },
+    "speak": {
+      "position": "Phrase {current} of {total}",
+      "sayThis": "Say this aloud",
+      "listening": "Listening...",
+      "tapToSpeak": "Tap and speak",
+      "tryAgain": "Try again",
+      "noMic": "The speaking check is not available on this device. Say the phrase aloud, then tap the button.",
+      "saidIt": "I said it",
+      "problems": {
+        "denied": "Microphone access is blocked. Allow it in your browser settings, or skip this step.",
+        "nospeech": "We did not hear anything. Tap and try again.",
+        "error": "Something went wrong with the microphone. You can skip this step."
+      },
+      "verdict": {
+        "good": "Excellent! Clear and correct.",
+        "close": "Almost there. Listen once more and try again.",
+        "again": "Not quite. Listen carefully and try again."
+      },
+      "youSaid": "We heard:",
+      "skip": "Skip speaking",
+      "next": "Next phrase",
+      "toQuiz": "Go to quiz"
+    },
+    "quiz": {
+      "progress": "Quiz progress",
+      "position": "Question {current} of {total}",
+      "askMeaning": "What does this mean?",
+      "askTranslate": "How do you say this in English?",
+      "askListen": "Listen, then choose what you heard",
+      "askArrange": "Put the words in the right order",
+      "play": "Play",
+      "yourSentence": "Your sentence",
+      "check": "Check",
+      "correct": "Correct!",
+      "wrong": "Not quite",
+      "correctAnswer": "The right answer:",
+      "continue": "Continue",
+      "seeResult": "See result"
+    },
+    "result": {
+      "saving": "Saving your result...",
+      "locked": "This lesson is still locked. Finish the one before it first.",
+      "error": "We could not save your result. Please try again.",
+      "notYet": "Not quite yet",
+      "needed": "You need at least {percent}% to pass. You got {got}%. Review the phrases and try again.",
+      "tryAgain": "Try the quiz again",
+      "reviewPhrases": "Review phrases",
+      "complete": "Lesson complete!",
+      "percent": "{percent}% correct",
+      "stars": "{count} stars",
+      "xp": "+{xp} XP",
+      "levelUp": "Level up! You are now level {level}",
+      "nextLesson": "Next lesson",
+      "backToCourse": "Back to course"
+    }
+  },
+  "offlineTests": {
+    "title": "Downloaded tests",
+    "subtitle": "Tests saved on this phone. You can take them with no internet.",
+    "backToTests": "Back to tests",
+    "backToList": "Back to downloaded tests",
+    "online": "You are online",
+    "offlineNow": "You are offline. Your downloaded tests still work.",
+    "waitingTitle": "{count, plural, one {# test result is} other {# test results are}} waiting to be saved",
+    "waitingBody": "They are sent to your account automatically when you are online.",
+    "syncNow": "Send now",
+    "syncing": "Sending...",
+    "emptyTitle": "No downloaded tests",
+    "emptyBody": "Open a practice test while you are online and tap Download for offline. It will appear here.",
+    "browseTests": "Browse tests",
+    "meta": "{count} questions · {minutes} min",
+    "start": "Start",
+    "remove": "Remove download",
+    "unsupportedTitle": "Offline tests are not available",
+    "unsupportedBody": "This browser cannot save tests on your phone. Try Chrome, or install the app.",
+    "missingTitle": "This test is not saved on this phone",
+    "missingBody": "Download it again while you are online.",
+    "noResultTitle": "Result not found",
+    "noResultBody": "This result is not saved on this phone.",
+    "synced": "Saved to your account",
+    "syncingNow": "Saving to your account...",
+    "notSynced": "Not saved to your account yet",
+    "syncExplain": "Your score is safe on this phone. It is added to your account and the leaderboard as soon as you are online.",
+    "fullResult": "See full result and AI analysis",
+    "tryAgain": "Take it again",
+    "download": "Download for offline",
+    "downloading": "Downloading...",
+    "saved": "Saved on this phone",
+    "takeOffline": "Take offline",
+    "needInternet": "Connect to the internet to download this test.",
+    "downloadFailed": "Could not download this test. Please try again."
+  },
+  "toasts": {
+    "studentApproved": "Student approved. They have been notified.",
+    "studentBlocked": "Student blocked.",
+    "studentUnblocked": "Student unblocked.",
+    "requestApproved": "Class change approved.",
+    "requestRejected": "Class change rejected.",
+    "deleted": "Deleted.",
+    "updated": "Updated.",
+    "added": "Added.",
+    "saved": "Changes saved.",
+    "announcement": "Announcement published. Students have been notified.",
+    "testPublished": "Test published.",
+    "testUnpublished": "Test moved back to draft.",
+    "scheduled": "Test scheduled. Your class has been notified.",
+    "cancelled": "Test cancelled. The class has been told.",
+    "teacherAdded": "Teacher added.",
+    "teacherRemoved": "Teacher access removed.",
+    "markedRead": "Marked as read.",
+    "markedUnread": "Marked as unread.",
+    "lessonDone": "Lesson marked as complete.",
+    "classUpdated": "Class updated.",
+    "requestSent": "Request sent. A teacher will review it.",
+    "imported": "{count, plural, one {# question} other {# questions}} added.",
+    "notificationsOn": "Notifications are on.",
+    "downloaded": "Test saved on this phone. You can take it offline.",
+    "synced": "{count, plural, one {# offline result was} other {# offline results were}} saved to your account.",
+    "messageDeleted": "Message deleted."
+  }
+}
