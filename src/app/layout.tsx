@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Sans_Devanagari } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
 import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { SkipLink } from "@/components/layout/skip-link";
@@ -67,6 +68,7 @@ export default async function RootLayout({
           </ThemeProvider>
           <ServiceWorkerRegister />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
