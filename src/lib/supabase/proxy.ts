@@ -26,6 +26,16 @@ function isProtected(pathname: string) {
 
 /** Refreshes the Supabase session cookie and bounces signed-out visitors to /login. */
 export async function updateSession(request: NextRequest) {
+  // Safety net: if Supabase ever sends the one-time login code to the home page (for example when
+  // the redirect address is not on its allowed list), pass it on to the real callback instead of
+  // dropping it, so the student is still signed in.
+  if (request.nextUrl.pathname === "/" && request.nextUrl.searchParams.has("code")) {
+    const callback = request.nextUrl.clone();
+    callback.pathname = "/auth/callback";
+    callback.searchParams.set("next", "/dashboard");
+    return NextResponse.redirect(callback);
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient<Database>(
