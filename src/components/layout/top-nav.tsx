@@ -20,6 +20,7 @@ export function TopNav({ items, label }: { items: NavItem[]; label: string }) {
             <li key={item.href}>
               <Link
                 href={item.href}
+                prefetch
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "rounded-control px-3 py-2 text-sm font-medium transition-colors",

@@ -32,9 +32,9 @@
 .dark {
   /* True black base: deepest on OLED screens, with only a faint step between layers. */
   --background: #000000;
-  --surface: #0b0b10;
-  --surface-muted: #15151c;
-  --border: #25252f;
+  --surface: #0f0f15;
+  --surface-muted: #191922;
+  --border: #2b2b37;
   --foreground: #f3f4f8;
   --muted-foreground: #a1a4b3;
 
@@ -84,6 +84,8 @@
 
 @layer base {
   html {
+    /* Painted on the page root too, so the area revealed by overscroll or a collapsing address bar matches. */
+    background: var(--background);
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
   }

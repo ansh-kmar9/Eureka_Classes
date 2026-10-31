@@ -12,19 +12,22 @@ export interface AnnouncementFeed {
   seenAt: string | null;
 }
 
-export async function getAnnouncementFeed(
-  profile: Pick<Profile, "announcements_seen_at">,
-): Promise<AnnouncementFeed> {
+/** The latest announcements. Needs no profile, so it can load while the profile loads. */
+export async function listLatestAnnouncements(): Promise<Announcement[]> {
   const supabase = await createClient();
-  const seenAt = profile.announcements_seen_at ?? null;
-
   const { data } = await supabase
     .from("announcements")
     .select("*")
     .order("created_at", { ascending: false })
     .limit(FEED_SIZE);
+  return data ?? [];
+}
 
-  const items = data ?? [];
+export function buildAnnouncementFeed(
+  items: Announcement[],
+  profile: Pick<Profile, "announcements_seen_at">,
+): AnnouncementFeed {
+  const seenAt = profile.announcements_seen_at ?? null;
   const unread = seenAt
     ? items.filter((item) => item.created_at > seenAt).length
     : items.length;

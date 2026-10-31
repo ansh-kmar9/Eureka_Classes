@@ -3,7 +3,10 @@ import { getTranslations } from "next-intl/server";
 import { AppShell } from "@/components/layout/app-shell";
 import { getStudentNavItems } from "@/components/layout/student-nav-items";
 import { AnnouncementsBell } from "@/features/announcements/components/announcements-bell";
-import { getAnnouncementFeed } from "@/features/announcements/queries";
+import {
+  buildAnnouncementFeed,
+  listLatestAnnouncements,
+} from "@/features/announcements/queries";
 import { requireStudent } from "@/features/auth/guards";
 import { OfflineSync } from "@/features/offline/components/offline-sync";
 
@@ -15,14 +18,16 @@ export default async function StudentLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const profile = await requireStudent();
-  // Independent lookups run together instead of one after the other.
-  // Only approved students can read announcements, so only they get the bell.
-  const [items, t, feed] = await Promise.all([
+  // Everything the frame needs loads at the same time. Announcements do not depend on the profile,
+  // and only approved students can read them, so only they get the bell.
+  const [profile, items, t, announcements] = await Promise.all([
+    requireStudent(),
     getStudentNavItems(),
     getTranslations("studentNav"),
-    profile.status === "approved" ? getAnnouncementFeed(profile) : null,
+    listLatestAnnouncements(),
   ]);
+  const feed =
+    profile.status === "approved" ? buildAnnouncementFeed(announcements, profile) : null;
 
   return (
     <AppShell

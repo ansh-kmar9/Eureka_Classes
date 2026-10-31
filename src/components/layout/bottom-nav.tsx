@@ -23,7 +23,7 @@ export function BottomNav({
     <nav
       aria-label={label}
       className={cn(
-        "pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border bg-surface/95 backdrop-blur md:hidden",
+        "pb-safe fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 backdrop-blur md:hidden",
         className,
       )}
     >
@@ -35,6 +35,7 @@ export function BottomNav({
             <li key={item.href} className="min-w-0 flex-1">
               <Link
                 href={item.href}
+                prefetch
                 aria-current={active ? "page" : undefined}
                 className={cn(
                   "flex min-h-14 flex-col items-center justify-end gap-0.5 px-0.5 pb-2 pt-1.5 text-[11px] font-medium transition-colors",
@@ -42,10 +43,10 @@ export function BottomNav({
                 )}
               >
                 {item.featured ? (
-                  // A round button that rises above the bar; the ring matches the bar so it looks cut out of it.
+                  // A round button that rises above the bar; the ring matches the page so it looks cut out of it.
                   <span
                     className={cn(
-                      "-mt-6 flex size-12 items-center justify-center rounded-full border-4 border-surface shadow-md transition-colors",
+                      "-mt-6 flex size-12 items-center justify-center rounded-full border-4 border-background shadow-md transition-colors",
                       active
                         ? "bg-gradient-to-br from-primary to-[#a855f7] text-primary-foreground"
                         : "bg-primary-soft text-primary",

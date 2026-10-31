@@ -17,6 +17,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   experimental: {
+    // Keep visited pages in the browser for a short while, so going back or revisiting a page is
+    // instant instead of waiting on the server again. Saving anything clears the affected pages.
+    staleTimes: { dynamic: 30, static: 120 },
     // Pull only the icons and Radix parts that are used into each page's bundle.
     optimizePackageImports: ["lucide-react", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
   },

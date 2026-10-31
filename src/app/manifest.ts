@@ -12,8 +12,9 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     display: "standalone",
     orientation: "portrait",
-    background_color: "#f6f7fb",
-    theme_color: "#4f46e5",
+    // Black: the splash screen and window frame of the installed app. The live status bar follows the theme.
+    background_color: "#000000",
+    theme_color: "#000000",
     categories: ["education"],
     lang: "en",
     icons: [
