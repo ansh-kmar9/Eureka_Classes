@@ -5,8 +5,8 @@ export async function getStudentNavItems(): Promise<NavItem[]> {
   const t = await getTranslations("studentNav");
   return [
     { href: "/tests", label: t("test"), icon: "test" },
-    { href: "/dashboard", label: t("dashboard"), icon: "dashboard" },
     { href: "/community", label: t("community"), icon: "community" },
+    { href: "/dashboard", label: t("dashboard"), icon: "dashboard", featured: true },
     { href: "/eurekabot", label: t("bot"), icon: "bot" },
     { href: "/spoken-english", label: t("spoken"), icon: "spokenEnglish" },
   ];

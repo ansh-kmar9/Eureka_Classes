@@ -32,17 +32,31 @@ export function BottomNav({
           const Icon = navIcons[item.icon];
           const active = item.href === activeHref;
           return (
-            <li key={item.href} className="flex-1">
+            <li key={item.href} className="min-w-0 flex-1">
               <Link
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 text-[11px] font-medium transition-colors",
+                  "flex min-h-14 flex-col items-center justify-end gap-0.5 px-0.5 pb-2 pt-1.5 text-[11px] font-medium transition-colors",
                   active ? "text-primary" : "text-muted-foreground",
                 )}
               >
-                <Icon className="size-5" aria-hidden />
-                <span className="max-w-full truncate">{item.label}</span>
+                {item.featured ? (
+                  // A round button that rises above the bar; the ring matches the bar so it looks cut out of it.
+                  <span
+                    className={cn(
+                      "-mt-6 flex size-12 items-center justify-center rounded-full border-4 border-surface shadow-md transition-colors",
+                      active
+                        ? "bg-gradient-to-br from-primary to-[#a855f7] text-primary-foreground"
+                        : "bg-primary-soft text-primary",
+                    )}
+                  >
+                    <Icon className="size-6" aria-hidden />
+                  </span>
+                ) : (
+                  <Icon className="size-5" aria-hidden />
+                )}
+                <span className="max-w-full break-words text-center leading-tight">{item.label}</span>
               </Link>
             </li>
           );

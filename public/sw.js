@@ -1,9 +1,18 @@
 /* Eureka Classes service worker: push notifications, offline pages, static asset caching. */
 
-const VERSION = "v2";
+const VERSION = "v4";
 const STATIC_CACHE = `eureka-static-${VERSION}`;
 const PAGE_CACHE = `eureka-pages-${VERSION}`;
 const OFFLINE_URL = "/offline";
+
+// Study-material PDFs the student has opened. Filled by the PDF viewer, not by this worker, and
+// kept across worker updates (it is cleared when the student signs out).
+const DOCS_CACHE = "eureka-docs";
+
+// Public marketing pages: the same for everyone, so they can be shown from the saved copy.
+const PUBLIC_PAGES = ["/", "/about", "/features", "/contact"];
+// On a slow connection a saved copy is shown instead of waiting this long for the network.
+const SLOW_NETWORK_MS = 3500;
 
 // Pages that must keep working with no connection (downloaded practice tests).
 const OFFLINE_PAGES = ["/tests/offline", "/tests/offline/run", "/tests/offline/result"];
@@ -28,7 +37,7 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key.startsWith("eureka-") && key !== STATIC_CACHE && key !== PAGE_CACHE)
+            .filter((key) => key.startsWith("eureka-") && key !== STATIC_CACHE && key !== PAGE_CACHE && key !== DOCS_CACHE)
             .map((key) => caches.delete(key)),
         ),
       )
@@ -40,6 +49,29 @@ self.addEventListener("activate", (event) => {
 const pageKey = (pathname) => new Request(self.location.origin + pathname);
 
 const isOfflinePage = (pathname) => OFFLINE_PAGES.includes(pathname.replace(/\/$/, ""));
+
+const isPublicPage = (pathname) => PUBLIC_PAGES.includes(pathname.replace(/(.)\/$/, "$1"));
+
+async function networkFirst(request, url) {
+  const cache = await caches.open(PAGE_CACHE);
+  const saved = await cache.match(pageKey(url.pathname));
+
+  const fresh = fetch(request).then((response) => {
+    // Only plain successful pages are saved, never redirects or errors.
+    if (response.ok && !response.redirected) cache.put(pageKey(url.pathname), response.clone());
+    return response;
+  });
+
+  if (!saved) {
+    return fresh.catch(async () => {
+      return (await (await caches.open(STATIC_CACHE)).match(OFFLINE_URL)) ?? Response.error();
+    });
+  }
+
+  // With a saved copy there is no reason to wait for a slow or missing connection.
+  const slow = new Promise((resolve) => setTimeout(() => resolve(saved), SLOW_NETWORK_MS));
+  return Promise.race([fresh, slow]).catch(() => saved);
+}
 
 self.addEventListener("fetch", (event) => {
   const { request } = event;
@@ -80,6 +112,12 @@ self.addEventListener("fetch", (event) => {
           return (await (await caches.open(STATIC_CACHE)).match(OFFLINE_URL)) ?? Response.error();
         }),
     );
+    return;
+  }
+
+  // Public pages: the network when it answers in time (and remember it), otherwise the saved copy.
+  if (isPublicPage(url.pathname) && request.mode === "navigate") {
+    event.respondWith(networkFirst(request, url));
     return;
   }
 

@@ -11,7 +11,7 @@ export async function PublicFooter() {
     <footer className="border-t border-border">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <Logo />
+          <Logo showName />
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
             {t("tagline")}
           </p>

@@ -53,7 +53,7 @@ export function ScheduledResults({ rows, eligible }: { rows: ResultRow[]; eligib
                   </span>
                   <StudentAvatar student={student} />
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-semibold">{student.full_name ?? student.email}</p>
+                    <p className="break-words font-semibold">{student.full_name ?? student.email}</p>
                     <div className="mt-1 flex flex-wrap gap-1.5">
                       {inProgress ? (
                         <Badge tone="accent">{t("inProgress")}</Badge>

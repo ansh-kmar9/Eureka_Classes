@@ -111,6 +111,30 @@ function PdfPage({
   );
 }
 
+/** Where opened PDFs are kept so they open again with no internet (cleared on sign-out). */
+const DOCS_CACHE = "eureka-docs";
+
+async function readSavedPdf(url: string): Promise<Uint8Array | null> {
+  try {
+    const saved = await (await caches.open(DOCS_CACHE)).match(url);
+    return saved ? new Uint8Array(await saved.arrayBuffer()) : null;
+  } catch {
+    return null;
+  }
+}
+
+/** Keeps a copy for next time. Best effort: a PDF that cannot be saved still opens normally. */
+async function savePdf(url: string) {
+  try {
+    const cache = await caches.open(DOCS_CACHE);
+    if (await cache.match(url)) return;
+    const response = await fetch(url, { mode: "cors", credentials: "omit" });
+    if (response.ok) await cache.put(url, response);
+  } catch {
+    // Offline, blocked by CORS or storage is full: nothing is saved.
+  }
+}
+
 /**
  * Reads a PDF inside the app. Pages are drawn on canvases as you scroll, which works on
  * every phone (most mobile browsers cannot show a PDF inside an iframe).
@@ -136,10 +160,15 @@ export function PdfViewer({ url, title }: { url: string; title: string }) {
           import.meta.url,
         ).toString();
 
-        const task = pdfjs.getDocument({ url, withCredentials: false });
+        // A saved copy opens instantly and works offline; otherwise stream it and save it for next time.
+        const saved = await readSavedPdf(url);
+        const task = saved
+          ? pdfjs.getDocument({ data: saved })
+          : pdfjs.getDocument({ url, withCredentials: false });
         loadingTask = task;
         const doc = await task.promise;
         if (cancelled) return;
+        if (!saved) void savePdf(url);
 
         const first = (await doc.getPage(1)).getViewport({ scale: 1 });
         setState({ status: "ready", doc, ratio: first.height / first.width });

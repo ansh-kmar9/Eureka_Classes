@@ -39,8 +39,8 @@ export default async function ProfilePage() {
       <Card className="flex items-center gap-4">
         <StudentAvatar student={profile} />
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold">{profile.full_name}</p>
-          <p className="truncate text-sm text-muted-foreground">{profile.email}</p>
+          <p className="break-words font-semibold">{profile.full_name}</p>
+          <p className="break-words text-sm text-muted-foreground">{profile.email}</p>
         </div>
         <StatusBadge status={profile.status} />
       </Card>

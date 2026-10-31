@@ -94,7 +94,7 @@ export function OfflineTestsList({ userId }: { userId: string }) {
           title={t("emptyTitle")}
           description={t("emptyBody")}
           action={
-            <Link href="/tests" className={buttonVariants({ variant: "outline" })}>
+            <Link href="/tests/practice" className={buttonVariants({ variant: "outline" })}>
               {t("browseTests")}
             </Link>
           }
@@ -105,7 +105,7 @@ export function OfflineTestsList({ userId }: { userId: string }) {
             <li key={test.id}>
               <Card className="flex items-center gap-3 p-3 sm:p-4">
                 <div className="min-w-0 flex-1">
-                  <p className="truncate font-semibold">{test.topic}</p>
+                  <p className="break-words font-semibold">{test.topic}</p>
                   <div className="mt-1.5 flex flex-wrap gap-1.5">
                     <Badge tone="primary">{test.subject}</Badge>
                     <Badge>{t("meta", { count: test.questions.length, minutes: test.durationMinutes })}</Badge>

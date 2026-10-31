@@ -19,8 +19,8 @@ export async function StaffAccount({ profile, homeHref }: { profile: Profile; ho
       <Card className="flex items-center gap-4">
         <StudentAvatar student={profile} />
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold">{profile.full_name ?? profile.email}</p>
-          <p className="truncate text-sm text-muted-foreground">{profile.email}</p>
+          <p className="break-words font-semibold">{profile.full_name ?? profile.email}</p>
+          <p className="break-words text-sm text-muted-foreground">{profile.email}</p>
         </div>
         <Badge tone="primary">{t(`role.${profile.role === "admin" ? "admin" : "teacher"}`)}</Badge>
       </Card>

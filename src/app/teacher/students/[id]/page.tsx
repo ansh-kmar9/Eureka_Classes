@@ -62,7 +62,7 @@ export default async function StudentDetailPage({
         <div className="flex items-center gap-4">
           <StudentAvatar student={student} />
           <div className="min-w-0 flex-1">
-            <h1 className="truncate text-xl font-bold">{student.full_name ?? student.email}</h1>
+            <h1 className="break-words text-xl font-bold">{student.full_name ?? student.email}</h1>
             <div className="mt-1">
               <StatusBadge status={student.status} />
             </div>

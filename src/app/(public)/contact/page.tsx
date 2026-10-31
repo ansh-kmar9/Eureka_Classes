@@ -54,7 +54,7 @@ export default async function ContactPage() {
                   </span>
                   <div className="min-w-0">
                     <CardTitle>{t(key)}</CardTitle>
-                    <p className="truncate text-sm text-muted-foreground">
+                    <p className="break-words text-sm text-muted-foreground">
                       {value}
                     </p>
                   </div>

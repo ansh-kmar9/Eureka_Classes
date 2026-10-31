@@ -23,7 +23,7 @@ export default async function LeaderboardPage() {
 
   return (
     <div className="mx-auto max-w-xl space-y-4">
-      <BackLink href="/tests">{t("back")}</BackLink>
+      <BackLink href="/tests/practice">{t("back")}</BackLink>
 
       <div>
         <h1 className="text-2xl font-bold tracking-tight">{t("leaderboard")}</h1>
@@ -51,7 +51,7 @@ export default async function LeaderboardPage() {
                   student={{ full_name: row.display_name, email: row.display_name, avatar_url: row.avatar_url }}
                 />
                 <div className="min-w-0 flex-1">
-                  <p className="truncate font-semibold">
+                  <p className="break-words font-semibold">
                     {row.display_name}
                     {row.is_me && <span className="ml-2 text-xs font-medium text-primary">{t("you")}</span>}
                   </p>

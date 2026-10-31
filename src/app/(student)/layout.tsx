@@ -16,10 +16,13 @@ export default async function StudentLayout({
   children: React.ReactNode;
 }) {
   const profile = await requireStudent();
-  const items = await getStudentNavItems();
-  const t = await getTranslations("studentNav");
+  // Independent lookups run together instead of one after the other.
   // Only approved students can read announcements, so only they get the bell.
-  const feed = profile.status === "approved" ? await getAnnouncementFeed(profile) : null;
+  const [items, t, feed] = await Promise.all([
+    getStudentNavItems(),
+    getTranslations("studentNav"),
+    profile.status === "approved" ? getAnnouncementFeed(profile) : null,
+  ]);
 
   return (
     <AppShell

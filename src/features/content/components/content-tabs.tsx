@@ -14,6 +14,9 @@ export function ContentTabs() {
   const t = useTranslations("content.tabs");
   const pathname = usePathname();
 
+  // The chooser and the upload screens ("/new") stand on their own.
+  if (pathname === "/teacher/content" || pathname.endsWith("/new")) return null;
+
   return (
     <nav aria-label={t("label")} className="flex gap-2">
       {tabs.map(({ href, key }) => {

@@ -80,7 +80,7 @@ export default async function TeacherCourseDetailPage({
                 <Card className="flex items-center gap-2 p-3">
                   <span className="w-5 text-center text-sm text-muted-foreground">{index + 1}</span>
                   <Icon className="size-5 shrink-0 text-primary" aria-hidden />
-                  <span className="min-w-0 flex-1 truncate font-medium">{lesson.title}</span>
+                  <span className="min-w-0 flex-1 break-words font-medium">{lesson.title}</span>
                   <a
                     href={lesson.url}
                     target="_blank"

@@ -52,8 +52,8 @@ export function StudentFilterBar({
 
   return (
     <div className="space-y-3">
-      <nav aria-label={t("statusTabs")} className="-mx-4 overflow-x-auto px-4">
-        <ul className="flex w-max gap-2">
+      <nav aria-label={t("statusTabs")}>
+        <ul className="flex flex-wrap gap-2">
           {tabs.map(({ key, count }) => {
             const active = filters.status === key;
             return (

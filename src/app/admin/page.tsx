@@ -22,8 +22,8 @@ function PersonRow({ person, children }: { person: Profile; children: React.Reac
     <Card className="flex items-center gap-3 p-3 sm:p-4">
       <StudentAvatar student={person} />
       <div className="min-w-0 flex-1">
-        <p className="truncate font-semibold">{person.full_name ?? person.email}</p>
-        <p className="truncate text-sm text-muted-foreground">{person.email}</p>
+        <p className="break-words font-semibold">{person.full_name ?? person.email}</p>
+        <p className="break-words text-sm text-muted-foreground">{person.email}</p>
       </div>
       {children}
     </Card>

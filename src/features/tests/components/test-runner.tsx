@@ -209,7 +209,7 @@ export function TestRunner({
     <div className="mx-auto max-w-2xl space-y-4">
       <div className="sticky top-16 z-20 -mx-4 space-y-2 border-b border-border bg-background/95 px-4 py-3 backdrop-blur">
         <div className="flex items-center justify-between gap-3">
-          <p className="min-w-0 truncate text-sm font-medium text-muted-foreground">{topic}</p>
+          <p className="min-w-0 break-words text-sm font-medium text-muted-foreground">{topic}</p>
           <p
             role="timer"
             className={cn(

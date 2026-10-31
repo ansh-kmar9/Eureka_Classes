@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { useFormatter, useTranslations } from "next-intl";
-import { Heart, MessageCircle, Trash2 } from "lucide-react";
+import { GraduationCap, Heart, MessageCircle, Trash2 } from "lucide-react";
 import { ActionButton } from "@/components/ui/action-button";
 import { Badge } from "@/components/ui/badge";
 import { StudentAvatar } from "@/features/students/components/student-card";
@@ -89,15 +89,28 @@ export function MessageCard({
   const isStaff = row.author_role !== "student";
 
   return (
-    <article className={cn("space-y-3", isReply ? "pt-3" : "rounded-card border border-border bg-surface p-4")}>
+    <article
+      className={cn(
+        "space-y-3",
+        isReply
+          ? "py-3"
+          : "rounded-2xl border p-4 shadow-sm",
+        !isReply && (isStaff ? "border-primary/40 bg-gradient-to-br from-primary-soft to-surface" : "border-border bg-surface"),
+      )}
+    >
       <header className="flex items-start gap-3">
         <StudentAvatar
           student={{ full_name: row.author_name, email: row.author_name, avatar_url: row.author_avatar }}
         />
         <div className="min-w-0 flex-1">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-            <span className="truncate font-semibold">{row.author_name}</span>
-            {isStaff && <Badge tone="primary">{t("teacher")}</Badge>}
+            <span className="break-words font-semibold">{row.author_name}</span>
+            {isStaff && (
+              <Badge tone="primary" className="gap-1">
+                <GraduationCap className="size-3.5" aria-hidden />
+                {t("teacher")}
+              </Badge>
+            )}
             {!isStaff && row.author_class && (
               <span className="text-xs text-muted-foreground">
                 {common("classLabel", { n: row.author_class })}
@@ -133,15 +146,15 @@ export function MessageCard({
 
       <p className="whitespace-pre-wrap break-words text-[15px] leading-relaxed">{row.body}</p>
 
-      <footer className="flex items-center gap-1 text-sm">
+      <footer className="flex flex-wrap items-center gap-2 text-sm">
         <button
           type="button"
           onClick={() => void like()}
           aria-pressed={liked}
           aria-label={liked ? t("unlike") : t("like")}
           className={cn(
-            "flex h-10 items-center gap-1.5 rounded-full px-3 transition-colors hover:bg-surface-muted",
-            liked ? "text-danger" : "text-muted-foreground",
+            "flex h-10 items-center gap-1.5 rounded-full px-3.5 font-medium transition-colors",
+            liked ? "bg-danger-soft text-danger" : "bg-surface-muted text-muted-foreground hover:text-foreground",
           )}
         >
           <Heart className="size-4" fill={liked ? "currentColor" : "none"} aria-hidden />
@@ -153,7 +166,7 @@ export function MessageCard({
             type="button"
             onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
-            className="flex h-10 items-center gap-1.5 rounded-full px-3 text-muted-foreground transition-colors hover:bg-surface-muted"
+            className="flex h-10 items-center gap-1.5 rounded-full bg-surface-muted px-3.5 font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             <MessageCircle className="size-4" aria-hidden />
             {row.reply_count > 0 ? t("replies", { count: row.reply_count }) : t("reply")}
@@ -162,7 +175,7 @@ export function MessageCard({
       </footer>
 
       {!isReply && open && (
-        <div className="space-y-3 border-l-2 border-border pl-4">
+        <div className="space-y-3 border-l-2 border-primary/30 pl-3 sm:pl-4">
           {repliesLoaded && replies.length > 0 && (
             <ul className="divide-y divide-border">
               {replies.map((reply) => (
@@ -184,6 +197,7 @@ export function MessageCard({
           )}
           <MessageComposer
             placeholder={t("replyPlaceholder")}
+            compact
             autoFocus={replies.length === 0}
             onSend={async (body) => {
               const result = await postMessage({ body, parentId: row.id });

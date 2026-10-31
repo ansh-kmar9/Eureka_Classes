@@ -36,8 +36,8 @@ export function ScopeFilter({ basePath, scope }: { basePath: string; scope: Cata
   const row = (label: string, children: React.ReactNode) => (
     <div className="space-y-1.5">
       <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{label}</p>
-      <nav aria-label={label} className="-mx-4 overflow-x-auto px-4">
-        <ul className="flex w-max gap-2">{children}</ul>
+      <nav aria-label={label}>
+        <ul className="flex flex-wrap gap-2">{children}</ul>
       </nav>
     </div>
   );

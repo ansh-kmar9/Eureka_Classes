@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { BookOpen } from "lucide-react";
+import Link from "next/link";
+import { BookOpen, Plus } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { ClassFilter, parseClassParam } from "@/features/content/components/class-filter";
 import { CourseCard } from "@/features/courses/components/course-card";
-import { CourseForm } from "@/features/courses/components/course-form";
-import { getCourseSummaries, listSubjects } from "@/features/courses/queries";
+import { getCourseSummaries } from "@/features/courses/queries";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("content.courses");
@@ -20,15 +21,17 @@ export default async function TeacherCoursesPage({
   const t = await getTranslations("content.courses");
   const classFilter = parseClassParam((await searchParams).class);
 
-  const [summaries, subjects] = await Promise.all([
-    getCourseSummaries({ classFilter }),
-    listSubjects(),
-  ]);
+  const summaries = await getCourseSummaries({ classFilter });
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold tracking-tight">{t("title")}</h1>
-      <CourseForm subjects={subjects} />
+      <div className="flex items-center justify-between gap-3">
+        <h1 className="text-2xl font-bold tracking-tight">{t("title")}</h1>
+        <Link href="/teacher/content/courses/new" className={buttonVariants({ size: "sm" })}>
+          <Plus className="size-4" aria-hidden />
+          {t("new")}
+        </Link>
+      </div>
 
       <ClassFilter basePath="/teacher/content/courses" selected={classFilter} />
 

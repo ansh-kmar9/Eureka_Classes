@@ -30,27 +30,28 @@
 }
 
 .dark {
-  --background: #0b1020;
-  --surface: #131a2e;
-  --surface-muted: #1a2340;
-  --border: #27314f;
-  --foreground: #e8ecf8;
-  --muted-foreground: #9aa5c0;
+  /* True black base: deepest on OLED screens, with only a faint step between layers. */
+  --background: #000000;
+  --surface: #0b0b10;
+  --surface-muted: #15151c;
+  --border: #25252f;
+  --foreground: #f3f4f8;
+  --muted-foreground: #a1a4b3;
 
-  --primary: #818cf8;
-  --primary-foreground: #0b1020;
-  --primary-soft: #1e2650;
+  --primary: #8b93f9;
+  --primary-foreground: #000000;
+  --primary-soft: #16163a;
 
   --accent: #fbbf24;
-  --accent-soft: #3a2c0c;
+  --accent-soft: #2b2108;
   --accent-foreground: #fef3c7;
 
   --success: #4ade80;
-  --success-soft: #11321f;
+  --success-soft: #0a2316;
   --danger: #f87171;
-  --danger-soft: #3b1618;
+  --danger-soft: #2f1214;
 
-  --ring: #818cf8;
+  --ring: #8b93f9;
   color-scheme: dark;
 }
 
@@ -78,6 +79,7 @@
 
   --font-sans: var(--font-inter), var(--font-devanagari), ui-sans-serif,
     system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 }
 
 @layer base {
@@ -87,10 +89,22 @@
   }
 
   body {
+    /* Safety net: no page should ever scroll sideways. `clip` (unlike `hidden`) keeps sticky bars working. */
+    overflow-x: clip;
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Long words and links wrap instead of pushing the page wider than the screen. */
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  dd {
+    overflow-wrap: break-word;
   }
 
   :focus-visible {
@@ -104,6 +118,14 @@
 }
 
 @layer utilities {
+  /* The "Eureka" wordmark: a warm serif with a soft indigo-to-violet sheen. */
+  .brand-gradient {
+    background-image: linear-gradient(120deg, var(--primary) 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   /* Keeps fixed bars clear of the iOS home indicator / Android gesture bar. */
   .pb-safe {
     padding-bottom: env(safe-area-inset-bottom);

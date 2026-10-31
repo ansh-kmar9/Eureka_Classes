@@ -38,8 +38,8 @@ export function StudentCard({ student }: { student: Profile }) {
       >
         <StudentAvatar student={student} />
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold">{student.full_name ?? student.email}</p>
-          <p className="truncate text-sm text-muted-foreground">
+          <p className="break-words font-semibold">{student.full_name ?? student.email}</p>
+          <p className="break-words text-sm text-muted-foreground">
             {[classLine, student.mobile].filter(Boolean).join(" · ") || student.email}
           </p>
         </div>

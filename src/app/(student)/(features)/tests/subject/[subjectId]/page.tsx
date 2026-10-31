@@ -28,7 +28,7 @@ export default async function SubjectTopicsPage({
 
   return (
     <div className="mx-auto max-w-2xl space-y-4">
-      <BackLink href="/tests">{t("back")}</BackLink>
+      <BackLink href="/tests/practice">{t("back")}</BackLink>
 
       <h1 className="text-2xl font-bold tracking-tight">{subject.name}</h1>
 

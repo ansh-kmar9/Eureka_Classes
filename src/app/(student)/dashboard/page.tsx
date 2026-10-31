@@ -70,7 +70,7 @@ export default async function DashboardPage() {
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-primary">
                   <Icon className="size-5" aria-hidden />
                 </span>
-                <span className="min-w-0 flex-1 truncate font-semibold">{label}</span>
+                <span className="min-w-0 flex-1 break-words font-semibold">{label}</span>
                 <ChevronRight className="size-4 shrink-0 text-muted-foreground" aria-hidden />
               </Card>
             </Link>

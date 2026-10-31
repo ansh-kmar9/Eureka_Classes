@@ -13,7 +13,7 @@ export async function RecentResults({ results }: { results: RecentResult[] }) {
     <section className="space-y-3">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold">{t("title")}</h2>
-        <Link href="/tests" className="text-sm font-medium text-primary">
+        <Link href="/tests/practice" className="text-sm font-medium text-primary">
           {t("takeTest")}
         </Link>
       </div>
@@ -29,7 +29,7 @@ export async function RecentResults({ results }: { results: RecentResult[] }) {
               <Link href={`/tests/attempts/${result.attemptId}`} className="block rounded-card">
                 <Card className="flex items-center gap-3 p-3 transition-colors hover:bg-surface-muted sm:p-4">
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-medium">{result.topic}</p>
+                    <p className="break-words font-medium">{result.topic}</p>
                     <p className="text-xs text-muted-foreground">
                       {format.dateTime(new Date(result.submittedAt), { dateStyle: "medium" })}
                     </p>

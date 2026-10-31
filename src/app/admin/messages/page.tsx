@@ -39,7 +39,7 @@ export default async function AdminMessagesPage() {
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <p className="flex items-center gap-2 font-semibold">
-                      <span className="truncate">{item.name}</span>
+                      <span className="break-words">{item.name}</span>
                       {!item.is_read && <Badge tone="primary">{t("new")}</Badge>}
                     </p>
                     <p className="break-all text-sm text-muted-foreground">

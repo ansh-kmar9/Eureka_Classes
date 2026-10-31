@@ -16,6 +16,10 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: {
+    // Pull only the icons and Radix parts that are used into each page's bundle.
+    optimizePackageImports: ["lucide-react", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu"],
+  },
   turbopack: {
     rules: {
       "*.css": {
@@ -27,6 +31,11 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/(.*)", headers: securityHeaders },
+      {
+        // Icons rarely change; the browser may reuse them for a day and refresh quietly after.
+        source: "/icons/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
+      },
       {
         // The worker must always be re-checked so updates reach users promptly.
         source: "/sw.js",

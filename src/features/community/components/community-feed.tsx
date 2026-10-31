@@ -79,7 +79,7 @@ export function CommunityFeed({
 
   return (
     <div className="space-y-4">
-      <Card className="p-3 sm:p-4">
+      <Card className="rounded-3xl bg-surface-muted/40 p-3 sm:p-4">
         <MessageComposer
           placeholder={t("placeholder")}
           onSend={async (body) => {

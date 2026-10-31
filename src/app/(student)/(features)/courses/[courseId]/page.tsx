@@ -69,7 +69,7 @@ export default async function CoursePage({
                   </span>
                   <Icon className="size-5 shrink-0 text-primary" aria-hidden />
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate font-medium">{lesson.title}</span>
+                    <span className="block break-words font-medium">{lesson.title}</span>
                     <span className="text-xs text-muted-foreground">
                       {lesson.type === "video" ? t("video") : t("pdf")}
                     </span>

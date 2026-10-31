@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import type { Profile } from "@/lib/supabase/types";
 import { Logo } from "./logo";
 import { TopNav } from "./top-nav";
 import { LanguageSwitcher } from "./language-switcher";
+import { ProfileMenu } from "./profile-menu";
 import { ThemeToggle } from "./theme-toggle";
 import type { NavItem } from "./icons";
 
@@ -25,7 +25,6 @@ export async function AppHeader({
   actions?: React.ReactNode;
 }) {
   const t = await getTranslations("common");
-  const initial = (profile.full_name ?? profile.email).trim().charAt(0).toUpperCase();
 
   return (
     <header className="pt-safe sticky top-0 z-30 border-b border-border bg-background/90 backdrop-blur">
@@ -36,23 +35,13 @@ export async function AppHeader({
           {actions}
           <LanguageSwitcher />
           <ThemeToggle />
-          <Link
-            href={profileHref}
-            aria-label={t("profile")}
-            className="ml-1 flex size-10 items-center justify-center overflow-hidden rounded-full bg-primary-soft text-sm font-bold text-primary"
-          >
-            {profile.avatar_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={profile.avatar_url}
-                alt=""
-                referrerPolicy="no-referrer"
-                className="size-full object-cover"
-              />
-            ) : (
-              initial
-            )}
-          </Link>
+          <ProfileMenu
+            name={profile.full_name}
+            email={profile.email}
+            avatarUrl={profile.avatar_url}
+            profileHref={profileHref}
+            labels={{ menu: t("accountMenu"), profile: t("profile"), signOut: t("signOut") }}
+          />
         </div>
       </div>
     </header>

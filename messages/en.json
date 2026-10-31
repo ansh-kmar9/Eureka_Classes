@@ -10,7 +10,9 @@
     "dismiss": "Dismiss",
     "backToDashboard": "Back to dashboard",
     "backToHome": "Back to home",
-    "skipToContent": "Skip to main content"
+    "skipToContent": "Skip to main content",
+    "accountMenu": "Account menu",
+    "signOut": "Sign out"
   },
   "nav": {
     "primary": "Main navigation",
@@ -307,7 +309,8 @@
     "announcements": "Announce",
     "content": "Content",
     "tests": "Tests",
-    "community": "Community"
+    "community": "Community",
+    "adminPanel": "Admin panel"
   },
   "adminNav": {
     "label": "Admin navigation",
@@ -504,6 +507,23 @@
       "deleteTitle": "Delete this material?",
       "deleteBody": "Students will no longer see it.",
       "open": "Open link"
+    },
+    "chooser": {
+      "title": "What do you want to upload?",
+      "subtitle": "Pick one and we will open the right screen.",
+      "back": "Back to content",
+      "course": {
+        "title": "A course",
+        "body": "Lessons made from YouTube videos or PDFs, grouped by subject for a class.",
+        "action": "Upload a course",
+        "manage": "See all courses"
+      },
+      "material": {
+        "title": "Study material",
+        "body": "Notes, PDFs or links for a class and subject that students can open any time.",
+        "action": "Upload study material",
+        "manage": "See all study material"
+      }
     }
   },
   "courses": {
@@ -635,7 +655,23 @@
     "subjectProgress": "{done} of {total} tests attempted",
     "noTopicsTitle": "No topics yet",
     "noTopicsBody": "Your teachers are still adding topics for this subject.",
-    "downloaded": "Downloaded"
+    "downloaded": "Downloaded",
+    "chooser": {
+      "title": "Which test do you want to take?",
+      "subtitle": "Pick the kind of test, and we will open the right list.",
+      "practice": {
+        "title": "Practice tests",
+        "body": "Chapter-wise tests for your class. Take them any time and as many times as you like.",
+        "action": "Open practice tests"
+      },
+      "scheduled": {
+        "title": "Scheduled tests",
+        "body": "Tests set by your teachers for a fixed date and time. You get one attempt.",
+        "action": "See scheduled tests",
+        "live": "{count} live now",
+        "upcoming": "{count} coming up"
+      }
+    }
   },
   "testsAdmin": {
     "title": "Practice tests",
@@ -1173,5 +1209,25 @@
     "synced": "{count, plural, one {# offline result was} other {# offline results were}} saved to your account.",
     "messageDeleted": "Message deleted.",
     "userDeleted": "Account deleted permanently."
+  },
+  "notFound": {
+    "title": "This page took a wrong turn",
+    "body": "We could not find the page you are looking for. It may have moved, or the link may be mistyped.",
+    "home": "Go to home",
+    "dashboard": "Open my dashboard"
+  },
+  "install": {
+    "title": "Add Eureka Classes to your home screen",
+    "body": "Open it like an app, get notifications and use downloaded tests with no internet.",
+    "install": "Install app",
+    "later": "Not now",
+    "close": "Close",
+    "iosTitle": "Add to Home Screen",
+    "iosStep1": "Tap the Share button in your browser.",
+    "iosStep2": "Scroll down and choose Add to Home Screen.",
+    "iosStep3": "Tap Add. Then open Eureka from your home screen.",
+    "manualStep1": "Open your browser menu (the three dots).",
+    "manualStep2": "Choose Install or Add to Home screen.",
+    "manualStep3": "Confirm. Then open Eureka from your home screen."
   }
 }

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { ExternalLink, Library, Trash2 } from "lucide-react";
+import Link from "next/link";
+import { ExternalLink, Library, Plus, Trash2 } from "lucide-react";
 import { ActionButton } from "@/components/ui/action-button";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { EmptyState } from "@/components/ui/empty-state";
 import { ClassFilter, parseClassParam } from "@/features/content/components/class-filter";
 import { AudienceLabel } from "@/features/content/components/audience-label";
-import { listSubjects } from "@/features/courses/queries";
 import { deleteMaterial } from "@/features/materials/actions";
-import { MaterialForm } from "@/features/materials/components/material-form";
 import { listMaterials } from "@/features/materials/queries";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,15 +26,17 @@ export default async function TeacherMaterialsPage({
   const toasts = await getTranslations("toasts");
   const classFilter = parseClassParam((await searchParams).class);
 
-  const [materials, subjects] = await Promise.all([
-    listMaterials(classFilter),
-    listSubjects(),
-  ]);
+  const materials = await listMaterials(classFilter);
 
   return (
     <div className="space-y-4">
-      <h1 className="text-2xl font-bold tracking-tight">{t("materials.title")}</h1>
-      <MaterialForm subjects={subjects} />
+      <div className="flex items-center justify-between gap-3">
+        <h1 className="text-2xl font-bold tracking-tight">{t("materials.title")}</h1>
+        <Link href="/teacher/content/materials/new" className={buttonVariants({ size: "sm" })}>
+          <Plus className="size-4" aria-hidden />
+          {t("materials.new")}
+        </Link>
+      </div>
 
       <ClassFilter basePath="/teacher/content/materials" selected={classFilter} />
 
@@ -46,7 +48,7 @@ export default async function TeacherMaterialsPage({
             <li key={item.id}>
               <Card className="flex items-center gap-3 p-3 sm:p-4">
                 <div className="min-w-0 flex-1">
-                  <p className="truncate font-medium">{item.title}</p>
+                  <p className="break-words font-medium">{item.title}</p>
                   <div className="mt-1 flex flex-wrap gap-1.5">
                     <Badge tone="primary">{item.subject}</Badge>
                     <Badge>

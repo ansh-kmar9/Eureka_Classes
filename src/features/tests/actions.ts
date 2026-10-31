@@ -21,7 +21,7 @@ const idSchema = z.uuid();
 
 function refreshTests(testId?: string) {
   revalidatePath("/teacher/tests");
-  revalidatePath("/tests");
+  revalidatePath("/tests", "layout");
   if (testId) revalidatePath(`/teacher/tests/${testId}`);
 }
 
@@ -235,7 +235,7 @@ export async function submitPracticeAttempt(input: unknown): Promise<SubmitResul
     // Badges are a bonus; the attempt is already saved.
   }
 
-  revalidatePath("/tests");
+  revalidatePath("/tests", "layout");
   revalidatePath("/dashboard");
   return { ok: true, attemptId: attempt.id, score, total: questions.length };
 }

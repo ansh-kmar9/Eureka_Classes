@@ -3,7 +3,7 @@ import { TestsTabs } from "@/features/tests/components/tests-tabs";
 export default function StudentTestsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="space-y-4">
-      <TestsTabs base="/tests" />
+      <TestsTabs base="/tests" practiceHref="/tests/practice" />
       {children}
     </div>
   );

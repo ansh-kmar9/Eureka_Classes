@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
 
-/** Scrollable "All, 6, 7 ... 12" chips. Selecting one reloads the page with ?class=. */
+/** "All, 6, 7 ... 12" chips that wrap onto a second line instead of scrolling sideways. Selecting one reloads the page with ?class=. */
 export function ClassFilter({
   basePath,
   selected,
@@ -15,8 +15,8 @@ export function ClassFilter({
   const options: (number | null)[] = [null, ...site.classes];
 
   return (
-    <nav aria-label={t("class")} className="-mx-4 overflow-x-auto px-4">
-      <ul className="flex w-max gap-2">
+    <nav aria-label={t("class")}>
+      <ul className="flex flex-wrap gap-2">
         {options.map((value) => (
           <li key={value ?? "all"}>
             <Link

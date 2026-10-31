@@ -20,7 +20,7 @@ function Stat({
       </span>
       <div className="min-w-0">
         <p className="text-xl font-bold leading-tight tabular-nums">{value}</p>
-        <p className="truncate text-xs text-muted-foreground">{label}</p>
+        <p className="break-words text-xs text-muted-foreground">{label}</p>
       </div>
     </Card>
   );

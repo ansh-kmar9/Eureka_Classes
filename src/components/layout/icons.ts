@@ -44,4 +44,6 @@ export interface NavItem {
   href: string;
   label: string;
   icon: NavIconName;
+  /** Drawn as a raised round button in the mobile bottom bar (the middle "home" item). */
+  featured?: boolean;
 }

@@ -36,7 +36,7 @@ export default async function StudentScheduledPage() {
               <Link href={`/tests/scheduled/${test.id}`} className="block rounded-card">
                 <Card className="flex items-center gap-3 p-3 transition-colors hover:bg-surface-muted sm:p-4">
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-semibold">{test.title}</p>
+                    <p className="break-words font-semibold">{test.title}</p>
                     <p className="mt-0.5 text-sm text-muted-foreground">
                       {format.dateTime(new Date(test.starts_at), {
                         dateStyle: "medium",

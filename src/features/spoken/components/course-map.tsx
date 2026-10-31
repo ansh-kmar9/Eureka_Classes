@@ -49,7 +49,7 @@ export function CourseMap({
                   <p className="font-semibold">
                     {t("levelName", { level: level.id })}: {level.title[locale]}
                   </p>
-                  <p className="truncate text-xs text-muted-foreground">{level.subtitle[locale]}</p>
+                  <p className="break-words text-xs text-muted-foreground">{level.subtitle[locale]}</p>
                 </div>
                 <span className="text-xs font-medium text-muted-foreground">
                   {finished}/{lessons.length}
@@ -80,7 +80,7 @@ export function CourseMap({
                             )}
                           >
                             <div className="min-w-0 flex-1">
-                              <p className="truncate font-medium">{lesson.title[locale]}</p>
+                              <p className="break-words font-medium">{lesson.title[locale]}</p>
                               <p className="text-xs text-muted-foreground">
                                 {t("phraseCount", { count: lesson.phrases.length })}
                               </p>
